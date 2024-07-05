@@ -1,0 +1,407 @@
+@media (max-width:1900px) {
+
+    /* .right-img img{
+        bottom: -15%;
+    }  */
+    .swiper-horizontal {
+        min-height: 550px;
+    }
+}
+
+@media (max-width: 1799.98px) {
+    .card-item::before {
+        top: -10%;
+        transform: translate(140%, 130%);
+    }
+
+}
+
+@media (max-width: 1599.98px) {}
+
+@media (max-width: 1399.98px) {
+    .swiper-horizontal {
+        min-height: 480px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .coomen-index-padding {
+        padding: 0 20px;
+    }
+
+    .articl-sec-flex {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .right-img img {
+        right: -9%;
+        bottom: 3%;
+    }
+
+    /* .bg-img {
+        background-image: none;
+    } */
+
+    .top-bar {
+        padding-top: 20px;
+    }
+
+    .card-img {
+        max-width: 70px;
+        min-height: 70px;
+    }
+
+    .contact-btn {
+        padding: 9px 18px;
+    }
+
+    .swiper-horizontal {
+        min-height: 410px;
+    }
+
+    .news-img-sec-text li {
+        font-size: 13px;
+    }
+
+    .planning-heading h2 {
+        font-size: 26px;
+    }
+
+    .why-choose-card {
+        padding: 20px;
+    }
+
+    .news-right-card {
+        padding-left: 0;
+    }
+
+}
+
+
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        align-items: start !important;
+        justify-content: flex-start;
+        gap: 20px !important;
+    }
+
+    .about-text {
+        margin-top: 150px;
+    }
+
+    .story-text {
+        margin-top: 0;
+    }
+
+    /* .bg-img {
+        background-position: 60% 30px;
+    } */
+
+    .right-img img {
+        right: 17%;
+        bottom: -19%;
+        max-width: 340px;
+        width: 100%;
+        height: 240px;
+    }
+
+    .about-text {
+        padding-left: 0;
+    }
+
+    .card-item::before {
+        display: none;
+    }
+
+    .have-questions-flex {
+        flex-direction: column;
+    }
+
+    .have-questions-right-text {
+        margin: 50px 0 50px;
+        padding: 0 40px;
+    }
+
+    .have-questions-img img {
+        max-width: 100%;
+        border-radius: 30px 30px 0 0;
+    }
+
+    /* .have-questions {
+        margin-right: 16px;
+    } */
+
+    .top-phone a {
+        white-space: nowrap;
+    }
+
+    .top-email a {
+        white-space: nowrap;
+    }
+
+    .footer-item {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .our-vision-flex img {
+        margin-bottom: 50px;
+        object-fit: cover;
+    }
+
+    .have-questions-button-bg {
+        margin-top: -57px;
+        margin-left: -8%;
+    }
+
+    .news-left-sec {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .news-right-sec {
+        padding: 0;
+    }
+
+    .card-img img {
+        max-width: 35px;
+        min-height: 35px;
+    }
+
+    .card-img {
+        max-width: 70px;
+        min-height: 70px;
+    }
+
+    .swiper-horizontal {
+        min-height: 440px;
+    }
+
+    .planning-heading h2 {
+        margin-top: 30px;
+    }
+
+    .why-choose-sec-card {
+        padding-bottom: 0;
+    }
+
+    .new-left-img img {
+        margin-top: 40px;
+    }
+
+    .news-right-card {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .top-bar-icon {
+        display: none;
+    }
+
+    .energy-flex-text p {
+        margin-bottom: 40px;
+    }
+
+    .leadership-sec {
+        margin: 50px 0;
+    }
+
+    .right-img img {
+        order: 2;
+    }
+
+    .about-text span {
+        order: 1;
+    }
+
+    /* .bg-img {
+        background-position: 75% 30px;
+        display: block;
+    } */
+    .swiper-horizontal {
+        min-height: 670px;
+    }
+
+    .our-services {
+        padding-bottom: 60px !important;
+    }
+
+
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand img {
+        max-width: 106px;
+    }
+
+    .canten-text h1 {
+        font-size: 30px;
+    }
+
+    .conten-text p {
+        font-size: 16px;
+    }
+
+    .canten-btn {
+        flex-direction: column;
+    }
+
+    .right-img img {
+        max-width: 250px;
+        min-height: 198px;
+    }
+
+    .left-img img {
+        max-width: 370px;
+        min-height: 400px;
+    }
+
+    .about-text-list {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .have-questions-right-text {
+        padding: 0 20px;
+    }
+
+    .have-questions-right-text h2 {
+        font-size: 30px;
+    }
+
+    .calculator-sec-bg {
+        padding: 25px 10px;
+        padding-bottom: 60px;
+    }
+
+    .why-choose-sec-text h2 {
+        font-size: 40px;
+    }
+
+    .why-choose-sec-text {
+        padding-top: 50px;
+    }
+
+    .our-latest h2 {
+        font-size: 36px;
+    }
+
+    .our-services-text h2 {
+        font-size: 34px;
+    }
+
+    .our-services-text {
+        padding-top: 50px;
+    }
+
+    .calculator-sec-text h2 {
+        font-size: 30px;
+    }
+
+    .articl-sec-text h2 {
+        font-size: 40px;
+    }
+
+    .objective-sec-text h2 {
+        font-size: 35px;
+    }
+
+    .about-text p {
+        font-size: 13px;
+    }
+
+    .con-bg {
+        font-size: 30px !important;
+    }
+
+    .copy-right-bg p {
+        font-size: 14px;
+    }
+
+    .copy-right-bg {
+        padding: 20px 20px;
+    }
+
+    .footer-sec p {
+        font-size: 20px;
+    }
+
+    .footer-sec span {
+        font-size: 14px;
+    }
+
+    .about-us {
+        margin-top: 50px;
+    }
+
+    .why-choose-sec {
+        margin-top: 50px;
+        padding: 0;
+    }
+
+    .video-btn img {
+        max-width: 50px;
+        min-height: 50px;
+    }
+
+    .our-latest-card {
+        margin-top: 50px;
+    }
+
+    .calculator-sec-form button {
+        margin-top: 20px;
+    }
+
+    .news-sec {
+        margin-top: 50px;
+    }
+
+    .leadership-conten {
+        margin-top: 80px;
+    }
+
+    .our-services {
+        padding-bottom: 30px !important;
+    }
+
+    .swiper-horizontal {
+        min-height: 700px;
+    }
+
+}
+
+/* @media (max-width:540px) {
+    .swiper-horizontal {
+        min-height: 650px;
+    }
+} */
+
+@media (max-width:387px) {
+    .top-bar-list {
+        gap: 0;
+    }
+
+    .slider-card {
+        padding: 15px;
+    }
+
+    .right-img img {
+        right: 10%;
+    }
+
+    .accordion-button {
+        font-size: 16px;
+    }
+
+    .card-img {
+        max-width: 70px;
+        min-height: 70px;
+    }
+    .articl-sec-card-bg h2{
+        font-size: 16px;
+    }
+}
