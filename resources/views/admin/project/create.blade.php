@@ -161,7 +161,6 @@
             editor.on('change', function() {
                 $('#projectForm').valid();
             });
-
         });
     </script>
 @endsection

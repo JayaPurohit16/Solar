@@ -2,13 +2,13 @@
 @section('main')
     <div class="main-content">
         <div class="page-header">
-            <h2 class="header-title">Services Edit</h2>
+            <h2 class="header-title">Product Edit</h2>
             <div class="header-sub-title">
                 <nav class="breadcrumb breadcrumb-dash">
                     <a href="{{ route('admin.dashboard') }}" class="breadcrumb-item"><i
                             class="anticon anticon-home m-r-5"></i>Home</a>
-                    <a href="{{ route('admin.services.index') }}" class="breadcrumb-item"><i class="fas fa-cog"></i>
-                        Services</a>
+                    <a href="{{ route('admin.services.index') }}" class="breadcrumb-item"><i class="anticon anticon-appstore"></i></i>
+                        Product</a>
                 </nav>
             </div>
         </div>
@@ -31,7 +31,7 @@
                             <input type="file" class="form-control" name="image">
                             @if (isset($servicesEdit->image) && file_exists(public_path('Services/Image/' . $servicesEdit->image)))
                                 <div class="mt-3">
-                                    <img src="{{ asset('Services/Image/' . $servicesEdit->image) }}" alt=""
+                                    <img src="{{ asset('public/Services/Image/' . $servicesEdit->image) }}" alt=""
                                         height="100" width="100">
                                 </div>
                             @else

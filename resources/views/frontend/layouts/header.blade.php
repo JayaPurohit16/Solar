@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/assets/image/sub-heading-img.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}">
 
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/frontend/assets/css/bootstrap.min.css') }}">
 
     <!-- Rubik Fonst-Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,10 +34,10 @@
     <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
 
     <!-- css-file Link -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/frontend/assets/css/style.css') }}">
 
     <!-- responsive Link -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/frontend/assets/css/responsive.css') }}">
 
     <!-- Image Slider Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
@@ -68,13 +68,14 @@
                 <div class="col-md-6">
                     <div class="top-bar-list">
                         <div class="top-email">
-                            <a href="#"><img src="{{ asset('frontend/assets/image/icon/email-icon.svg') }}"
+                            <a href="#"><img src="{{ asset('public/frontend/assets/image/icon/email-icon.svg') }}"
                                     alt="" width="14px" height="14px">
                                 {{ isset($cms->support_email) ? $cms->support_email : '' }}</a>
                         </div>
                         <div class="top-phone">
-                            <a href="#"><img src="{{ asset('frontend/assets/image/icon/phone-icon.svg') }}"
+                            <a href="#"><img src="{{ asset('public/frontend/assets/image/icon/phone-icon.svg') }}"
                                     alt="" width="14px" height="14px">
+                                +{{ isset($cms->getCountryCode->phonecode) ? $cms->getCountryCode->phonecode : '' }}
                                 {{ isset($cms->customer_support) ? $cms->customer_support : '' }}</a>
                         </div>
                     </div>
@@ -82,23 +83,24 @@
                 <div class="col-md-6">
                     <div class="top-bar-icon">
                         <div class="bg-color-icon">
-                            <a href="{{ isset($cms->facebook_link) ? $cms->facebook_link : '' }}"><img
-                                    src="{{ asset('frontend/assets/image/icon/facebook-icon.svg') }}"
+                            <a href="{{ isset($cms->facebook_link) ? $cms->facebook_link : '' }}" target="_blank"><img
+                                    src="{{ asset('public/frontend/assets/image/icon/facebook-icon.svg') }}"
                                     alt="Facebook Icon" width="14px" height="14px"></a>
                         </div>
                         <div class="bg-color-icon">
-                            <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}"><img
-                                    src="{{ asset('frontend/assets/image/icon/twitter-icon.svg') }}"
+                            <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}" target="_blank"><img
+                                    src="{{ asset('public/frontend/assets/image/icon/twitter-icon.svg') }}"
                                     alt="Facebook Icon" width="14px" height="14px"></a>
                         </div>
                         <div class="bg-color-icon">
-                            <a href="{{ isset($cms->linkedin_link) ? $cms->linkedin_link : '' }}"><img
-                                    src="{{ asset('frontend/assets/image/icon/linkedin-icon.svg') }}"
+                            <a href="{{ isset($cms->linkedin_link) ? $cms->linkedin_link : '' }}" target="_blank"><img
+                                    src="{{ asset('public/frontend/assets/image/icon/linkedin-icon.svg') }}"
                                     alt="Facebook Icon" width="14px" height="14px"></a>
                         </div>
                         <div class="bg-color-icon">
-                            <a href="{{ isset($cms->instagram_link) ? $cms->instagram_link : '' }}"><img
-                                    src="{{ asset('frontend/assets/image/icon/instagram-icon.svg') }}"
+                            <a href="{{ isset($cms->instagram_link) ? $cms->instagram_link : '' }}"
+                                target="_blank"><img
+                                    src="{{ asset('public/frontend/assets/image/icon/instagram-icon.svg') }}"
                                     alt="Facebook Icon" width="14px" height="14px"></a>
                         </div>
                     </div>
@@ -109,10 +111,11 @@
                     <div class="container-fluid">
                         @if (isset($cms->logo) && file_exists(public_path('Cms/Logo/' . $cms->logo)))
                             <a class="navbar-brand" href="{{ route('frontend.index') }}"><img
-                                    src="{{ asset('Cms/Logo/' . $cms->logo) }}" alt="Logo"></a>
+                                    src="{{ asset('public/Cms/Logo/' . $cms->logo) }}" alt="Logo"></a>
                         @else
                             <a class="navbar-brand" href="{{ route('frontend.index') }}"><img
-                                    src="{{ asset('frontend/assets/image/solor-logo.svg') }}" alt="Logo"></a>
+                                    src="{{ asset('public/frontend/assets/image/solor-logo.svg') }}"
+                                    alt="Logo"></a>
                         @endif
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -193,7 +196,7 @@
                     Request::route()->getName() == 'frontend.who-we-are.about-the-company')
                 <div class="main-canten">
                     <div class="canten-text">
-                        <span><img src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}"
+                        <span><img src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}"
                                 alt="Heading Image">Welcome to solor</span>
                         <h1>Lorem ipsum dolor sit amet <span class="con-bg">consectetu</span></h1>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda excepturi corrupti harum
@@ -213,7 +216,7 @@
                         <div class="leadership-list">
                             <ol>
                                 <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                <li><img src="{{ asset('frontend/assets/image/svg/leadership-svg.svg') }}"
+                                <li><img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
                                         alt=""></li>
                                 <li>Leadership</li>
                             </ol>
@@ -227,10 +230,10 @@
                         <div class="leadership-list">
                             <ol>
                                 <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                <li><img src="{{ asset('frontend/assets/image/svg/leadership-svg.svg') }}"
+                                <li><img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
                                         alt=""></li>
                                 <li>Product</li>
-                                <li><img src="{{ asset('frontend/assets/image/svg/leadership-svg.svg') }}"
+                                <li><img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
                                         alt=""></li>
                                 <li>{{ isset($product->title) ? $product->title : '' }}</li>
                             </ol>
@@ -240,17 +243,17 @@
             @elseif (Request::route()->getName() == 'frontend.project.index')
                 <div class="news-detail-header-main-canten leadership-conten">
                     <div class="canten-text">
-                        <h1>{{ isset($project->title) ? $project->title : '' }}</h1>
+                        <h1>Project</h1>
                         <div class="leadership-list">
                             <ol>
                                 <li><a href="{{ route('frontend.index') }}">Home</a></li>
                                 <li>
-                                    <img src="{{ asset('frontend/assets/image/svg/leadership-svg.svg') }}"
+                                    <img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
                                         alt="" />
                                 </li>
                                 <li>Project</li>
                                 <li>
-                                    <img src="{{ asset('frontend/assets/image/svg/leadership-svg.svg') }}"
+                                    <img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
                                         alt="" />
                                 </li>
                                 <li>{{ isset($project->title) ? $project->title : '' }}</li>
@@ -265,7 +268,7 @@
                         <div class="leadership-list">
                             <ol>
                                 <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                <li><img src="{{ asset('frontend/assets/image/svg/leadership-svg.svg') }}"
+                                <li><img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
                                         alt=""></li>
                                 <li>News</li>
                             </ol>
@@ -281,12 +284,12 @@
                                 <li>{{ isset($newsDetail->date) ? \Carbon\Carbon::parse($newsDetail->date)->format('F d.Y') : '' }}
                                 </li>
                                 <li>
-                                    <img src="{{ asset('frontend/assets/image/svg/leadership-svg.svg') }}"
+                                    <img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
                                         alt="" />
                                 </li>
                                 <li>By awaiken</li>
                                 <li>
-                                    <img src="{{ asset('frontend/assets/image/svg/leadership-svg.svg') }}"
+                                    <img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
                                         alt="" />
                                 </li>
                                 <li>In Uncategorized</li>

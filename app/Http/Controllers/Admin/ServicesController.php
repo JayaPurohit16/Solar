@@ -18,7 +18,7 @@ class ServicesController extends Controller
         try {
             return view('admin.services.index');
         } catch (Exception $e) {
-            Log::error('Admin Services Index Page Error : ' . $e->getMessage());
+            Log::error('Admin Product Index Page Error : ' . $e->getMessage());
             return redirect()->back()->with('error', "Something went wrong!");
         }
     }
@@ -80,7 +80,7 @@ class ServicesController extends Controller
 
             return response()->json(["draw" => $request->draw, "recordsTotal" => $recordsTotal, "recordsFiltered" => $recordsFiltered, 'data' => $users], 200);
         } catch (Exception $e) {
-            Log::error('Admin Services List Error : ' . $e->getMessage());
+            Log::error('Admin Product List Error : ' . $e->getMessage());
         }
     }
 
@@ -91,7 +91,7 @@ class ServicesController extends Controller
         try {
             return view('admin.services.create');
         } catch (Exception $e) {
-            Log::error('Admin Services Create Page Error : ' . $e->getMessage());
+            Log::error('Admin Product Create Page Error : ' . $e->getMessage());
             return redirect()->back()->with('error', "Something went wrong!");
         }
     }
@@ -116,14 +116,14 @@ class ServicesController extends Controller
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
                 $filename = uniqid() . '.' . $extension;
-                $file->move('Services/Image', $filename);
+                $file->move('public/Services/Image', $filename);
                 $services->image = $filename;
             }
             $services->description = $request->description;
             $services->why_us_description = $request->why_us_description;
             $services->why_us_video_link = $request->why_us_video_link;
             $services->save();
-            return redirect()->route('admin.services.index')->with('success', "Services added successfully!");
+            return redirect()->route('admin.services.index')->with('success', "Product added successfully!");
         } catch (Exception $e) {
             Log::error('Admin Services Store Error : ' . $e->getMessage());
             return redirect()->back()->with('error', "Something went wrong!");
@@ -138,7 +138,7 @@ class ServicesController extends Controller
             $servicesEdit = Services::where('id', base64_decode($id))->first();
             return view('admin.services.edit', compact('servicesEdit'));
         } catch (Exception $e) {
-            Log::error('Admin Services Edit Error : ' . $e->getMessage());
+            Log::error('Admin Product Edit Error : ' . $e->getMessage());
             return redirect()->back()->with('error', "Something went wrong!");
         }
     }
@@ -154,30 +154,31 @@ class ServicesController extends Controller
                 'description' => 'required',
                 'image' => 'required|sometimes|image|mimes:jpeg,png,jpg,svg',
                 'why_us_description' => 'required',
-                'why_us_video_link' => 'required|url',
+                'why_us_video_link' => 'required',
             ]);
 
             $servicesUpdate = Services::where('id', $id)->first();
             $servicesUpdate->title = $request->title;
             if ($request->hasFile('image')) {
 
-                if (File::exists(public_path('Services/Image/' . $servicesUpdate->image))) {
-                    unlink(public_path('Services/Image/' . $servicesUpdate->image));
+                if (File::exists(public_path('public/Services/Image/' . $servicesUpdate->image))) {
+                    unlink(public_path('public/Services/Image/' . $servicesUpdate->image));
                 }
 
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
                 $filename = uniqid() . '.' . $extension;
-                $file->move('Services/Image', $filename);
+                $file->move('public/Services/Image', $filename);
                 $servicesUpdate->image = $filename;
             }
             $servicesUpdate->description = $request->description;
             $servicesUpdate->why_us_description = $request->why_us_description;
             $servicesUpdate->why_us_video_link = $request->why_us_video_link;
             $servicesUpdate->update();
-            return redirect()->route('admin.services.index')->with('success', "Services updated successfully!");
+            return redirect()->route('admin.services.index')->with('success', "Product updated successfully!");
         } catch (Exception $e) {
-            Log::error('Admin Services Update Error : ' . $e->getMessage());
+            dd($e);
+            Log::error('Admin Product Update Error : ' . $e->getMessage());
             return redirect()->back()->with('error', "Something went wrong!");
         }
     }
@@ -188,13 +189,13 @@ class ServicesController extends Controller
     {
         try {
             $servicesDelete = Services::where('id', base64_decode($request->id))->first();
-            if (File::exists(public_path('Services/Image/' . $servicesDelete->image))) {
-                unlink(public_path('Services/Image/' . $servicesDelete->image));
+            if (File::exists(public_path('public/Services/Image/' . $servicesDelete->image))) {
+                unlink(public_path('public/Services/Image/' . $servicesDelete->image));
             }
             $servicesDelete->delete();
-            return redirect()->route('admin.services.index')->with('success', "Services deleted successfully!");
+            return redirect()->route('admin.services.index')->with('success', "Product deleted successfully!");
         } catch (Exception $e) {
-            Log::error('Admin Services Delete Error : ' . $e->getMessage());
+            Log::error('Admin Product Delete Error : ' . $e->getMessage());
             return redirect()->back()->with('error', "Something went wrong!");
         }
     }

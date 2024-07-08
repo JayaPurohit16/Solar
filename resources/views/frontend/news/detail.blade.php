@@ -8,10 +8,11 @@
                         {{-- <a href="#"> --}}
                         <figure class="image-anime">
                             @if (isset($newsDetail->image) && file_exists(public_path('News/Image/' . $newsDetail->image)))
-                                <img src="{{ asset('News/Image/' . $newsDetail->image) }}" alt="" class="img-fluid" />
-                            @else
-                                <img src="{{ asset('frontend/assets/imges/bg-images/news-detail-img.jpg') }}" alt=""
+                                <img src="{{ asset('public/News/Image/' . $newsDetail->image) }}" alt=""
                                     class="img-fluid" />
+                            @else
+                                <img src="{{ asset('public/frontend/assets/imges/bg-images/news-detail-img.jpg') }}"
+                                    alt="" class="img-fluid" />
                             @endif
                         </figure>
                         {{-- </a> --}}
@@ -92,20 +93,23 @@
                                     <div class="comment-section-social-icons pe-0">
                                         <ul class="text-lg-end text-start">
                                             <li>
-                                                <a href="#" class="p-2 ms-2">
-                                                    <img src="{{ asset('frontend/assets/imges/icon/facebook-dark-icon.svg') }}"
+                                                <a href="{{ isset($cms->facebook_link) ? $cms->facebook_link : '' }}" target="_blank"
+                                                    class="p-2 ms-2">
+                                                    <img src="{{ asset('public/frontend/assets/imges/icon/facebook-dark-icon.svg') }}"
                                                         alt="" />
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="p-2 ms-2">
-                                                    <img src="{{ asset('frontend/assets/imges/icon/twitter-dark-icon.svg') }}"
+                                                <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}" target="_blank"
+                                                    class="p-2 ms-2">
+                                                    <img src="{{ asset('public/frontend/assets/imges/icon/twitter-dark-icon.svg') }}"
                                                         alt="" />
                                                 </a>
                                             </li>
                                             <li class="pe-0">
-                                                <a href="" class="p-2 ms-2">
-                                                    <img src="{{ asset('frontend/assets/imges/icon/linkedin-dark-icon.svg') }}"
+                                                <a href="{{ isset($cms->linkedin_link) ? $cms->linkedin_link : '' }}" target="_blank"
+                                                    class="p-2 ms-2">
+                                                    <img src="{{ asset('public/frontend/assets/imges/icon/linkedin-dark-icon.svg') }}"
                                                         alt="" />
                                                 </a>
                                             </li>

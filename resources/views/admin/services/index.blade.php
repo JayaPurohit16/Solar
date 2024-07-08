@@ -2,7 +2,7 @@
 @section('main')
     <div class="main-content">
         <div class="page-header">
-            <h2 class="header-title">Services</h2>
+            <h2 class="header-title">Products</h2>
             <div class="header-sub-title">
                 <nav class="breadcrumb breadcrumb-dash">
                     <a href="{{ route('admin.dashboard') }}" class="breadcrumb-item"><i
@@ -16,7 +16,7 @@
                 <div class="float-right mb-3">
                     <a href="{{ route('admin.services.create') }}"><button class="btn btn-primary"><i
                                 class="anticon anticon-plus"></i> Create
-                            Services</button></a>
+                            Product</button></a>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover e-commerce-table" id="services-table">

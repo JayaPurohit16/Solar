@@ -17,7 +17,8 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="section-sec-card footer-sec">
                             <div class="card-img">
-                                <img src="{{ asset('frontend/assets/image/svg/footer-svg.svg') }}   " alt="">
+                                <img src="{{ asset('public/frontend/assets/image/svg/footer-svg.svg') }}   "
+                                    alt="">
                             </div>
                             <div class="card-text footer-card-text">
                                 <p>Support & Email</p>
@@ -29,11 +30,14 @@
                     <div class="col-lg-4 col-md-6 ">
                         <div class="section-sec-card footer-sec">
                             <div class="card-img">
-                                <img src="{{ asset('frontend/assets/image/svg/footer-svg-1.svg') }}" alt="">
+                                <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-1.svg') }}"
+                                    alt="">
                             </div>
                             <div class="card-text footer-card-text">
                                 <p>Customer Support</p>
-                                <span>{{ isset($cms->customer_support) ? $cms->customer_support : '' }}</span>
+                                <span>
+                                    +{{ isset($cms->getCountryCode->phonecode) ? $cms->getCountryCode->phonecode : '' }}
+                                    {{ isset($cms->customer_support) ? $cms->customer_support : '' }}</span>
                                 {{-- <span>+01 547 547 5478</span> --}}
                             </div>
                         </div>
@@ -41,7 +45,8 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="section-sec-card footer-sec">
                             <div class="card-img">
-                                <img src="{{ asset('frontend/assets/image/svg/footer-svg-2.svg') }}" alt="">
+                                <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-2.svg') }}"
+                                    alt="">
                             </div>
                             <div class="card-text footer-card-text">
                                 <p>Our Location</p>
@@ -58,24 +63,29 @@
                     <div class="col-lg-4">
                         <div class="footer-list-text">
                             @if (isset($cms->footer_logo) && file_exists(public_path('Cms/FooterLogo/' . $cms->footer_logo)))
-                                <img src="{{ asset('Cms/FooterLogo/' . $cms->footer_logo) }}" alt="Footer Logo">
+                                <img src="{{ asset('public/Cms/FooterLogo/' . $cms->footer_logo) }}" alt="Footer Logo">
                             @else
-                                <img src="{{ asset('frontend/assets/image/footer-logo-img.svg') }}" alt="Footer Logo">
+                                <img src="{{ asset('public/frontend/assets/image/footer-logo-img.svg') }}"
+                                    alt="Footer Logo">
                             @endif
                             <p>Green Energy is a long established fact that a reader will be distracted by the
                                 readable content of a page when.</p>
                             <div class="footer-icon">
-                                <a href="{{ isset($cms->facebook_link) ? $cms->facebook_link : '' }}"><img
-                                        src="{{ asset('frontend/assets/image/icon/footer-facebook-icon.svg') }}"
+                                <a href="{{ isset($cms->facebook_link) ? $cms->facebook_link : '' }}"
+                                    target="_blank"><img
+                                        src="{{ asset('public/frontend/assets/image/icon/footer-facebook-icon.svg') }}"
                                         alt=""></a>
-                                <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}"><img
-                                        src="{{ asset('frontend/assets/image/icon/footer-twitter-icon.svg') }}"
+                                <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}"
+                                    target="_blank"><img
+                                        src="{{ asset('public/frontend/assets/image/icon/footer-twitter-icon.svg') }}"
                                         alt=""></a>
-                                <a href="{{ isset($cms->linkedin_link) ? $cms->linkedin_link : '' }}"><img
-                                        src="{{ asset('frontend/assets/image/icon/footer-linkedin-icon.svg') }}"
+                                <a href="{{ isset($cms->linkedin_link) ? $cms->linkedin_link : '' }}"
+                                    target="_blank"><img
+                                        src="{{ asset('public/frontend/assets/image/icon/footer-linkedin-icon.svg') }}"
                                         alt=""></a>
-                                <a href="{{ isset($cms->instagram_link) ? $cms->instagram_link : '' }}"><img
-                                        src="{{ asset('frontend/assets/image/icon/footer-instagram-icon.svg') }}"
+                                <a href="{{ isset($cms->instagram_link) ? $cms->instagram_link : '' }}"
+                                    target="_blank"><img
+                                        src="{{ asset('public/frontend/assets/image/icon/footer-instagram-icon.svg') }}"
                                         alt=""></a>
                             </div>
                         </div>

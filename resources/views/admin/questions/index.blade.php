@@ -2,7 +2,7 @@
 @section('main')
     <div class="main-content">
         <div class="page-header">
-            <h2 class="header-title">Questions</h2>
+            <h2 class="header-title">FAQ</h2>
             <div class="header-sub-title">
                 <nav class="breadcrumb breadcrumb-dash">
                     <a href="{{ route('admin.dashboard') }}" class="breadcrumb-item"><i

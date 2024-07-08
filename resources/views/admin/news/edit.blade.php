@@ -45,8 +45,8 @@
                             <input type="file" style="color: black;" class="form-control" name="image">
                             @if (isset($newsEdit->image) && file_exists(public_path('News/Image/' . $newsEdit->image)))
                                 <div class="mt-3">
-                                    <img src="{{ asset('News/Image/' . $newsEdit->image) }}" alt="" height="100"
-                                        width="100">
+                                    <img src="{{ asset('public/News/Image/' . $newsEdit->image) }}" alt=""
+                                        height="100" width="100">
                                 </div>
                             @else
                             @endif
