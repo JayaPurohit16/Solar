@@ -172,9 +172,9 @@ a {
 .top-bar-icon {
     display: flex;
     gap: 8px;
-    align-items: end;
+    align-items: center;
     justify-content: flex-end;
-    margin-top: 3px;
+    padding-right: 25px;
 }
 
 .bg-color {
@@ -2117,7 +2117,7 @@ a {
 .section-sec-card {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 30px;
     padding-bottom: 30px;
 }
 
@@ -2148,7 +2148,6 @@ a {
 
 .footer-card-text span {
     color: #89ea5f;
-    font-family: var(--rubik-font);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6em;
@@ -2487,7 +2486,10 @@ select:focus-visible {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0 70px;
+}
+
+.footer-borbottom-section {
+    border-bottom: 1px solid #334d20;
 }
 
 .footer-sec {
@@ -2501,23 +2503,20 @@ select:focus-visible {
 }
 
 .footer-sec span {
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     font-weight: 400;
     line-height: 1.6em;
-}
-
-.footer-borbottom {
-    border-bottom: 1px solid #334d20;
+    font-family: var(--rubik-font);
 }
 
 .footer-list {
-    padding-top: 60px;
+    padding-top: 58px;
     /* margin: 0 86px; */
 }
 
 .footer-item {
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 .footer-list-text img {
@@ -2529,7 +2528,6 @@ select:focus-visible {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6em;
-    font-family: var(--rubik-font);
     max-width: 305px;
     margin-bottom: 30px;
 }
@@ -2537,12 +2535,12 @@ select:focus-visible {
 .footer-icon {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .footer-icon a img {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
 }
 
 .footer-quick h5 {
@@ -2558,9 +2556,12 @@ select:focus-visible {
     padding-left: 20px;
 }
 
+.footer-quick li {
+    margin-bottom: 12px;
+}
+
 .footer-quick li a {
     color: #fff;
-    font-family: var(--rubik-font);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6em;
@@ -3334,19 +3335,25 @@ iframe {
 }
 
 .comment-section-social-icons ul {
-    text-align: end;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.comment-section-social-icons ul li {
-    display: inline;
-}
-
 .comment-section-social-icons ul li a {
+    width: 35px;
+    aspect-ratio: 1;
     background-color: #89ea5f;
     border-radius: 10px;
+    transition: all 0.35s ease;
+}
+
+.comment-section-social-icons ul li a:hover {
+    background-color: #163300;
+}
+
+.comment-section-social-icons ul li a:hover svg {
+    fill: #89ea5f;
 }
 
 .comment-form p,

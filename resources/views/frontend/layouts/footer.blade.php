@@ -10,54 +10,55 @@
 
 
 <footer>
-    <div class="footer-bg-img coomen-index-padding">
-        <div class="container">
-            <div class="footer-borbottom">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="section-sec-card footer-sec">
-                            <div class="card-img">
-                                <img src="{{ asset('public/frontend/assets/image/svg/footer-svg.svg') }}   "
-                                    alt="">
-                            </div>
-                            <div class="card-text footer-card-text">
-                                <p>Support & Email</p>
-                                <span>{{ isset($cms->support_email) ? $cms->support_email : '' }}</span>
-                                {{-- <span>info@domainname.com</span> --}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 ">
-                        <div class="section-sec-card footer-sec">
-                            <div class="card-img">
-                                <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-1.svg') }}"
-                                    alt="">
-                            </div>
-                            <div class="card-text footer-card-text">
-                                <p>Customer Support</p>
-                                <span>
-                                    +{{ isset($cms->getCountryCode->phonecode) ? $cms->getCountryCode->phonecode : '' }}
-                                    {{ isset($cms->customer_support) ? $cms->customer_support : '' }}</span>
-                                {{-- <span>+01 547 547 5478</span> --}}
+    <div class="footer-bg-img">
+        <div class="container-fluid footer-borbottom-section p-0">
+            <div class="container">
+                <div class="footer-borbottom">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="section-sec-card footer-sec">
+                                <div class="card-img">
+                                    <img src="{{ asset('public/frontend/assets/image/svg/footer-svg.svg') }}   " alt="">
+                                </div>
+                                <div class="card-text footer-card-text">
+                                    <p>Support & Email</p>
+                                    <span>{{ isset($cms->support_email) ? $cms->support_email : '' }}</span>
+                                    {{-- <span>info@domainname.com</span> --}}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="section-sec-card footer-sec">
-                            <div class="card-img">
-                                <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-2.svg') }}"
-                                    alt="">
-                            </div>
-                            <div class="card-text footer-card-text">
-                                <p>Our Location</p>
-                                <span>{{ isset($cms->our_location) ? $cms->our_location : '' }}</span>
-                                {{-- <span>Street no, City, Country 123456</span> --}}
+                        <div class="col-lg-4 col-md-6 ">
+                            <div class="section-sec-card footer-sec">
+                                <div class="card-img">
+                                    <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-1.svg') }}" alt="">
+                                </div>
+                                <div class="card-text footer-card-text">
+                                    <p>Customer Support</p>
+                                    <span>
+                                        +{{ isset($cms->getCountryCode->phonecode) ? $cms->getCountryCode->phonecode : '' }}
+                                        {{ isset($cms->customer_support) ? $cms->customer_support : '' }}</span>
+                                    {{-- <span>+01 547 547 5478</span> --}}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="section-sec-card footer-sec">
+                                <div class="card-img">
+                                    <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-2.svg') }}" alt="">
+                                </div>
+                                <div class="card-text footer-card-text">
+                                    <p>Our Location</p>
+                                    <span>{{ isset($cms->our_location) ? $cms->our_location : '' }}</span>
+                                    {{-- <span>Street no, City, Country 123456</span> --}}
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="container p-2">
             <div class="footer-list">
                 <div class="row">
                     <div class="col-lg-4">
@@ -75,8 +76,7 @@
                                     target="_blank"><img
                                         src="{{ asset('public/frontend/assets/image/icon/footer-facebook-icon.svg') }}"
                                         alt=""></a>
-                                <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}"
-                                    target="_blank"><img
+                                <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}" target="_blank"><img
                                         src="{{ asset('public/frontend/assets/image/icon/footer-twitter-icon.svg') }}"
                                         alt=""></a>
                                 <a href="{{ isset($cms->linkedin_link) ? $cms->linkedin_link : '' }}"
@@ -98,7 +98,8 @@
                                         <h5>Quick Links</h5>
                                         <ul>
                                             <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                            <li><a href="{{ route('frontend.who-we-are.about-the-company') }}"> Who We
+                                            <li><a href="{{ route('frontend.who-we-are.about-the-company') }}"> Who
+                                                    We
                                                     Are</a></li>
                                             <li><a href="#">Products</a></li>
                                             <li><a href="#">Projects</a></li>
@@ -227,10 +228,10 @@
 <!-- bootstrap-Js Link -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-</script>
+    </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
-</script>
+    </script>
 
 <!-- Swiper Slider Js Link -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
