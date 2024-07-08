@@ -220,9 +220,11 @@
     .swiper-horizontal {
         min-height: 670px;
     }
-
     .our-services {
         padding-bottom: 60px !important;
+    }
+    .card-img {
+        border-radius: 20px;
     }
 }
 
@@ -372,6 +374,11 @@
 
     .news-detail-img .image-anime {
         border-radius: 10px;
+    }
+
+    .news-detail-img .image-anime,
+    .news-quote {
+        border-radius: 15px;
     }
 }
 
