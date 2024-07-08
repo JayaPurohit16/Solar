@@ -58,33 +58,33 @@
                  </a>
              </li>
 
-             <!-- Services -->
+             <!-- Product -->
              <li
                  class="{{ Request::route()->getName() == 'admin.services.index' || Request::route()->getName() == 'admin.services.create' || Request::route()->getName() == 'admin.services.edit' ? 'active' : '' }}">
                  <a href="{{ route('admin.services.index') }}">
                      <span class="icon-holder">
-                         <i class="fas fa-cog"></i>
+                        <i class="anticon anticon-appstore"></i>
                      </span>
-                     <span class="title" title="Services">Services</span>
+                     <span class="title" title="Product">Product</span>
                      <span class="arrow">
                          <i class="arrow-icon"></i>
                      </span>
                  </a>
              </li>
 
-             <!-- Questions -->
-             <li
+             <!-- FAQ -->
+             {{-- <li
                  class="{{ Request::route()->getName() == 'admin.questions.index' || Request::route()->getName() == 'admin.questions.create' || Request::route()->getName() == 'admin.questions.edit' ? 'active' : '' }}">
                  <a href="{{ route('admin.questions.index') }}">
                      <span class="icon-holder">
                          <i class="anticon anticon-question"></i>
                      </span>
-                     <span class="title" title="Questions">Questions</span>
+                     <span class="title" title="Questions">FAQ</span>
                      <span class="arrow">
                          <i class="arrow-icon"></i>
                      </span>
                  </a>
-             </li>
+             </li> --}}
 
              <!-- CMS -->
              <li class="{{ Request::route()->getName() == 'admin.cms.index' ? 'active' : '' }}">

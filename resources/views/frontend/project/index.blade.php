@@ -10,7 +10,7 @@
                             @if (isset($project->project_date) && $project->project_date)
                                 <li class="d-flex align-items-center gap-3 py-4">
                                     <div class="about-page-img d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('frontend/assets/imges/icon/project-date-icon.svg') }}"
+                                        <img src="{{ asset('public/frontend/assets/imges/icon/project-date-icon.svg') }}"
                                             alt="" />
                                     </div>
                                     <div class="about-page-data">
@@ -23,7 +23,7 @@
                             @if (isset($project->energy_generation) && $project->energy_generation)
                                 <li class="d-flex align-items-center gap-3 py-4">
                                     <div class="about-page-img d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('frontend/assets/imges/icon/energy-generation.svg') }}"
+                                        <img src="{{ asset('public/frontend/assets/imges/icon/energy-generation.svg') }}"
                                             alt="" />
                                     </div>
                                     <div class="about-page-data">
@@ -35,7 +35,8 @@
                             @if (isset($project->category) && $project->category)
                                 <li class="d-flex align-items-center gap-3 py-4">
                                     <div class="about-page-img d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('frontend/assets/imges/icon/category.svg') }}" alt="" />
+                                        <img src="{{ asset('public/frontend/assets/imges/icon/category.svg') }}"
+                                            alt="" />
                                     </div>
                                     <div class="about-page-data">
                                         <h6>Category:</h6>
@@ -46,7 +47,7 @@
                             @if (isset($project->client_company) && $project->client_company)
                                 <li class="d-flex align-items-center gap-3 py-4">
                                     <div class="about-page-img d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('frontend/assets/imges/icon/clint-company.svg') }}"
+                                        <img src="{{ asset('public/frontend/assets/imges/icon/clint-company.svg') }}"
                                             alt="" />
                                     </div>
                                     <div class="about-page-data">
@@ -58,7 +59,7 @@
                             @if (isset($project->location) && $project->location)
                                 <li class="border-0 d-flex align-items-center gap-3 py-4">
                                     <div class="about-page-img d-flex align-items-center justify-content-center">
-                                        <img src="{{ asset('frontend/assets/imges/icon/project-location.svg') }}"
+                                        <img src="{{ asset('public/frontend/assets/imges/icon/project-location.svg') }}"
                                             alt="" />
                                     </div>
                                     <div class="about-page-data">
@@ -75,10 +76,10 @@
                         {{-- <a href="#"> --}}
                         <figure class="image-anime">
                             @if (isset($project->image) && file_exists(public_path('Project/Image/' . $project->image)))
-                                <img src="{{ asset('Project/Image/' . $project->image) }}" alt=""
+                                <img src="{{ asset('public/Project/Image/' . $project->image) }}" alt=""
                                     class="img-fluid" />
                             @else
-                                <img src="{{ asset('frontend/assets/imges/bg-images/project-detail-img.jpg') }}"
+                                <img src="{{ asset('public/frontend/assets/imges/bg-images/project-detail-img.jpg') }}"
                                     alt="" class="img-fluid" />
                             @endif
                         </figure>
@@ -137,9 +138,9 @@
                                                         <div class="img-box">
                                                             @if (isset($galleryImage->gallery_images) &&
                                                                     file_exists(public_path('Project/GalleryImage/' . $galleryImage->gallery_images)))
-                                                                <a href="{{ asset('Project/GalleryImage/' . $galleryImage->gallery_images) }}"
+                                                                <a href="{{ asset('public/Project/GalleryImage/' . $galleryImage->gallery_images) }}"
                                                                     class="glightbox" data-glightbox="type: image">
-                                                                    <img src="{{ asset('Project/GalleryImage/' . $galleryImage->gallery_images) }}"
+                                                                    <img src="{{ asset('public/Project/GalleryImage/' . $galleryImage->gallery_images) }}"
                                                                         alt="image" />
                                                                 </a>
                                                             @endif

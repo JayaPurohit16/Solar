@@ -150,7 +150,7 @@ class ProjectController extends Controller
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
                 $filename = uniqid() . '.' . $extension;
-                $file->move('Project/Image', $filename);
+                $file->move('public/Project/Image', $filename);
                 $project->image = $filename;
             }
             $project->save();
@@ -159,7 +159,7 @@ class ProjectController extends Controller
                 foreach ($request->file('gallery_images') as $file) {
                     $extension = $file->getClientOriginalExtension();
                     $filename = uniqid() . '.' . $extension;
-                    $file->move('Project/GalleryImage', $filename);
+                    $file->move('public/Project/GalleryImage', $filename);
 
                     $projectGalleryImages = new ProjectGalleryImage();
                     $projectGalleryImages->project_id = $project->id;
@@ -199,13 +199,13 @@ class ProjectController extends Controller
 
 
             if ($request->hasFile('image')) {
-                if (File::exists(public_path('Project/Image/' . $projectUpdate->image))) {
-                    unlink(public_path('Project/Image/' . $projectUpdate->image));
+                if (File::exists(public_path('public/Project/Image/' . $projectUpdate->image))) {
+                    unlink(public_path('public/Project/Image/' . $projectUpdate->image));
                 }
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
                 $filename = uniqid() . '.' . $extension;
-                $file->move('Project/Image', $filename);
+                $file->move('public/Project/Image', $filename);
                 $projectUpdate->image = $filename;
             }
             $projectUpdate->update();
@@ -214,7 +214,7 @@ class ProjectController extends Controller
                 foreach ($request->file('gallery_images') as $file) {
                     $extension = $file->getClientOriginalExtension();
                     $filename = uniqid() . '.' . $extension;
-                    $file->move('Project/GalleryImage', $filename);
+                    $file->move('public/Project/GalleryImage', $filename);
 
                     $projectGalleryImages = new ProjectGalleryImage();
                     $projectGalleryImages->project_id = $projectUpdate->id;
@@ -238,14 +238,14 @@ class ProjectController extends Controller
         try {
             $projectDelete = Project::where('id', base64_decode($request->id))->first();
 
-            if (File::exists(public_path('Project/Image/' . $projectDelete->image))) {
-                unlink(public_path('Project/Image/' . $projectDelete->image));
+            if (File::exists(public_path('public/Project/Image/' . $projectDelete->image))) {
+                unlink(public_path('public/Project/Image/' . $projectDelete->image));
             }
 
             $projectGalleryImagesDelete = ProjectGalleryImage::where('project_id', $projectDelete->id)->get();
             foreach ($projectGalleryImagesDelete as $delete) {
-                if (File::exists(public_path('Project/GalleryImage/' . $delete->gallery_images))) {
-                    unlink(public_path('Project/GalleryImage/' . $delete->gallery_images));
+                if (File::exists(public_path('public/Project/GalleryImage/' . $delete->gallery_images))) {
+                    unlink(public_path('public/Project/GalleryImage/' . $delete->gallery_images));
                 }
                 $delete->delete();
             }
@@ -266,8 +266,8 @@ class ProjectController extends Controller
     {
         try {
             $galleryImagesDelete = ProjectGalleryImage::findOrFail($id);
-            if (File::exists(public_path('Project/GalleryImage/' . $galleryImagesDelete->gallery_images))) {
-                unlink(public_path('Project/GalleryImage/' . $galleryImagesDelete->gallery_images));
+            if (File::exists(public_path('public/Project/GalleryImage/' . $galleryImagesDelete->gallery_images))) {
+                unlink(public_path('public/Project/GalleryImage/' . $galleryImagesDelete->gallery_images));
             }
             $galleryImagesDelete->delete();
 

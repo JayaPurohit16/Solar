@@ -11,12 +11,12 @@
 
     <!-- Favicon -->
     {{-- <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}"> --}}
-    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/assets/image/sub-heading-img.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}">
 
     <!-- page css -->
 
     <!-- Core css -->
-    <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/assets/css/app.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -77,12 +77,12 @@
 
 
     <!-- Core Vendors JS -->
-    <script src="{{ asset('assets/js/vendors.min.js') }}"></script>
+    <script src="{{ asset('public/assets/js/vendors.min.js') }}"></script>
 
     <!-- page js -->
 
     <!-- Core JS -->
-    <script src="{{ asset('assets/js/app.min.js') }}"></script>
+    <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
         integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="

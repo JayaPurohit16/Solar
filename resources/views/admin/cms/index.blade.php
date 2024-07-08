@@ -24,9 +24,22 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label>Customer Support</label>
-                            <input type="text" class="form-control" onkeypress="return /[0-9]/i.test(event.key)"
-                                value="{{ isset($cms->customer_support) ? $cms->customer_support : '' }}" maxlength="10"
-                                minlength="10" name="customer_support" placeholder="Customer Support">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <select class="form-control select2" name="country_code">
+                                        @foreach ($countryCode as $code)
+                                            <option value="{{ $code->id }}"
+                                                {{ (isset($cms->country_code) && $cms->country_code == $code->id) || (!isset($cms->country_code) && $code->phonecode == '91') ? 'selected' : '' }}>
+                                                +{{ $code->phonecode }} ({{ $code->iso }})
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <input type="text" class="form-control" onkeypress="return /[0-9]/i.test(event.key)"
+                                    value="{{ isset($cms->customer_support) ? $cms->customer_support : '' }}" maxlength="10"
+                                    minlength="10" name="customer_support" placeholder="Customer Support">
+                            </div>
+                            <label id="customer_support-error" class="error" for="customer_support"></label>
                         </div>
                     </div>
                     <div class="form-row">
@@ -71,7 +84,7 @@
                             <input type="file" class="form-control" name="logo">
                             @if (isset($cms->logo) && file_exists(public_path('Cms/Logo/' . $cms->logo)))
                                 <div class="mt-3">
-                                    <img src="{{ asset('Cms/Logo/' . $cms->logo) }}" alt="Logo" height="100"
+                                    <img src="{{ asset('public/Cms/Logo/' . $cms->logo) }}" alt="Logo" height="100"
                                         width="100">
                                 </div>
                             @else
@@ -83,7 +96,7 @@
                             <input type="file" class="form-control" name="footer_logo">
                             @if (isset($cms->footer_logo) && file_exists(public_path('Cms/FooterLogo/' . $cms->footer_logo)))
                                 <div class="mt-3">
-                                    <img src="{{ asset('Cms/FooterLogo/' . $cms->footer_logo) }}" alt="footer_logo"
+                                    <img src="{{ asset('public/Cms/FooterLogo/' . $cms->footer_logo) }}" alt="footer_logo"
                                         height="100" width="100">
                                 </div>
                             @else

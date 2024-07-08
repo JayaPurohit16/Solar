@@ -10,30 +10,12 @@
                                 @foreach ($productTitle as $index => $title)
                                     <li><a href="{{ route('frontend.products.index', base64_encode($title->id)) }}"
                                             class="{{ $index < count($productTitle) - 1 ? 'news-border-bottom' : '' }}"><img
-                                                src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="">
+                                                src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}"
+                                                alt="">
                                             {{ isset($title->title) ? $title->title : '' }}
                                         </a>
                                     </li>
                                 @endforeach
-                                {{-- <li><a href="#" class="news-border-bottom"><img
-                                            src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="">
-                                        Hybrid Energy</a></li>
-                                <li><a href="#" class="news-border-bottom"><img
-                                            src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="">
-                                        Renewable Energy</a>
-                                </li>
-                                <li><a href="#" class="news-border-bottom"><img
-                                            src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="">
-                                        Solar Maintenance​</a>
-                                </li>
-                                <li><a href="#" class="news-border-bottom"><img
-                                            src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="">
-                                        Solar PV Systems</a>
-                                </li>
-                                <li><a href="#"><img src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}"
-                                            alt=""> Solar
-                                        Solutions</a>
-                                </li> --}}
                             </ul>
                         </div>
 
@@ -41,11 +23,13 @@
                             <div class="have-questions-bg news-bg">
                                 <div class="have-questions-flex news-left-flex">
                                     <div class="have-questions-img news-left-img">
-                                        <img src="{{ asset('frontend/assets/image/news-img-card.jpg') }}" alt=" Image">
+                                        <img src="{{ asset('public/frontend/assets/image/news-img-card.jpg') }}"
+                                            alt=" Image">
                                     </div>
                                     <div class="have-questions-btn">
                                         <div class="have-questions-button-bg new-bg-img">
-                                            <img src="{{ asset('frontend/assets/image/svg/have-svg.svg') }}" alt="">
+                                            <img src="{{ asset('public/frontend/assets/image/svg/have-svg.svg') }}"
+                                                alt="">
                                         </div>
                                     </div>
                                     <div class="have-questions-right-text news-left-bg">
@@ -61,11 +45,11 @@
                     <div class="news-right-sec">
                         <div class="news-right-text">
                             @if (isset($product->image) && file_exists(public_path('Services/Image/' . $product->image)))
-                                <img class="product-section-img" src="{{ asset('Services/Image/' . $product->image) }}"
-                                    alt="Image">
+                                <img class="product-section-img"
+                                    src="{{ asset('public/Services/Image/' . $product->image) }}" alt="Image">
                             @else
                                 <img class="product-section-img"
-                                    src="{{ asset('frontend/assets/image/planning-sec-img.jpg') }}" alt="Image">
+                                    src="{{ asset('public/frontend/assets/image/planning-sec-img.jpg') }}" alt="Image">
                             @endif
                             <p>{!! isset($product->description) ? $product->description : '' !!}</p>
                             <h2>Why us!</h2>
@@ -74,10 +58,11 @@
                             <section class="video-bg product-video">
                                 <div class="video-men" style="position: relative;">
                                     <div class="video-bgimg">
-                                        <img src="{{ asset('frontend/assets/image/video-bg-img.jpg') }}" alt="">
+                                        <img src="{{ asset('public/frontend/assets/image/video-bg-img.jpg') }}"
+                                            alt="">
                                         <button type="button" class="btn video-btn" data-bs-toggle="modal"
                                             data-bs-target="#staticBackdrop">
-                                            <img src="{{ asset('frontend/assets/image/svg/video-svg.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/svg/video-svg.svg') }}"
                                                 alt="Video Svg">
                                         </button>
                                     </div>
@@ -92,7 +77,7 @@
                                 <div class="row">
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="why-choose-card news-right-card">
-                                            <img src="{{ asset('frontend/assets/image/svg/news-right-svg.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/svg/news-right-svg.svg') }}"
                                                 alt="">
                                             <h5>Renewable Energy</h5>
                                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed
@@ -102,7 +87,7 @@
                                     </div>
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="why-choose-card news-right-card">
-                                            <img src="{{ asset('frontend/assets/image/svg/news-card1-svg.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/svg/news-card1-svg.svg') }}"
                                                 alt="">
                                             <h5>Energy Saving</h5>
                                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed
@@ -112,7 +97,7 @@
                                     </div>
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="why-choose-card news-right-card">
-                                            <img src="{{ asset('frontend/assets/image/svg/choose-svg-2.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/svg/choose-svg-2.svg') }}"
                                                 alt="">
                                             <h5>Easy Installation</h5>
                                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed
@@ -122,7 +107,7 @@
                                     </div>
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="why-choose-card news-right-card">
-                                            <img src="{{ asset('frontend/assets/image/svg/choose-svg-3.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/svg/choose-svg-3.svg') }}"
                                                 alt="">
                                             <h5>Energy Solution</h5>
                                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed
@@ -132,7 +117,7 @@
                                     </div>
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="why-choose-card news-right-card">
-                                            <img src="{{ asset('frontend/assets/image/svg/news-card2-svg.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/svg/news-card2-svg.svg') }}"
                                                 alt="">
                                             <h5>Technical Support</h5>
                                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed
@@ -142,7 +127,7 @@
                                     </div>
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="why-choose-card news-right-card">
-                                            <img src="{{ asset('frontend/assets/image/svg/news-card3-svg.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/svg/news-card3-svg.svg') }}"
                                                 alt="">
                                             <h5>Solar Maintenance</h5>
                                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed
@@ -157,7 +142,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="new-left-img">
-                                            <img src="{{ asset('frontend/assets/image/planning-sec-img.jpg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/planning-sec-img.jpg') }}"
                                                 alt="">
                                         </div>
                                     </div>
@@ -169,21 +154,21 @@
                                                 Lorem Ipsum has been standard dummy text ever since the 1500s. </p>
                                             <ul>
                                                 <li><img class="news-li-icon"
-                                                        src="{{ asset('frontend/assets/image/icon/check-icon.svg') }}"
+                                                        src="{{ asset('public/frontend/assets/image/icon/check-icon.svg') }}"
                                                         alt="">Research beyond
                                                     the
                                                     business plan</li>
                                                 <li><img class="news-li-icon"
-                                                        src="{{ asset('frontend/assets/image/icon/check-icon.svg') }}"
+                                                        src="{{ asset('public/frontend/assets/image/icon/check-icon.svg') }}"
                                                         alt="">Marketing options
                                                     and
                                                     rates</li>
                                                 <li><img class="news-li-icon"
-                                                        src="{{ asset('frontend/assets/image/icon/check-icon.svg') }}"
+                                                        src="{{ asset('public/frontend/assets/image/icon/check-icon.svg') }}"
                                                         alt="">The ability to
                                                     turnaround consulting</li>
                                                 <li><img class="news-li-icon"
-                                                        src="{{ asset('frontend/assets/image/icon/check-icon.svg') }}"
+                                                        src="{{ asset('public/frontend/assets/image/icon/check-icon.svg') }}"
                                                         alt="">It was
                                                     popularised in
                                                     the 1960s with the.</li>
@@ -295,13 +280,34 @@
             <div class="modal-content">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body">
-                    @if (isset($product->why_us_video_link) && !empty($product->why_us_video_link))
+                    @if (isset($product->why_us_video_link) && $product->why_us_video_link != null)
+                        @php
+                            preg_match(
+                                '/(?:http[s]?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/',
+                                $product->why_us_video_link,
+                                $matches,
+                            );
+                            $product->why_us_video_link = $matches[1] ?? null;
+                        @endphp
+                        @if ($product->why_us_video_link)
+                            <iframe width="315" height="400"
+                                src="https://www.youtube.com/embed/{{ $product->why_us_video_link }}"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        @else
+                            <p>Invalid YouTube link.</p>
+                        @endif
+                    @else
+                        <p>No link found</p>
+                    @endif
+                    {{-- @if (isset($product->why_us_video_link) && !empty($product->why_us_video_link))
                         <iframe src="{{ $product->why_us_video_link }}" title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     @else
                         <p>No video available</p>
-                    @endif
+                    @endif --}}
                 </div>
             </div>
         </div>

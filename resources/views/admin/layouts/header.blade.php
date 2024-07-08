@@ -8,17 +8,17 @@
 
     <!-- Favicon -->
     {{-- <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}"> --}}
-    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/assets/image/sub-heading-img.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}">
 
     <!-- page css -->
     {{-- Data Table Link --}}
-    <link href="{{ asset('assets/vendors/datatables/dataTables.bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendors/datatables/dataTables.bootstrap.min.css') }}" rel="stylesheet">
     {{-- Date Picker Link --}}
-    <link href="{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}" rel="stylesheet">
     {{-- Select 2 Link --}}
-    <link href="{{ asset('assets/vendors/select2/select2.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendors/select2/select2.css') }}" rel="stylesheet">
     <!-- Core css -->
-    <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/assets/css/app.min.css') }}" rel="stylesheet">
 
     <style>
         .error {
@@ -40,9 +40,9 @@
             <div class="header">
                 <div class="logo logo-dark mt-1">
                     <a href="{{ route('admin.dashboard') }}">
-                        <img src="{{ asset('frontend/assets/image/solor-logo.svg') }}" width="120px;" height="60px"
+                        <img src="{{ asset('public/frontend/assets/image/solor-logo.svg') }}" width="120px;" height="60px"
                             alt="Logo">
-                        <img class="logo-fold" src="{{ asset('frontend/assets/image/solor-logo.svg') }}" width="75px;"
+                        <img class="logo-fold" src="{{ asset('public/frontend/assets/image/solor-logo.svg') }}" width="75px;"
                             height="60px" alt="Logo">
                         {{-- <h4 style="align-content: center;height: 65px;" class="custom">Solar</h4> --}}
                         {{-- @if (isset($setting))
@@ -78,14 +78,14 @@
                         <li class="dropdown dropdown-animated scale-left">
                             <div class="pointer" data-toggle="dropdown">
                                 <div class="avatar avatar-image  m-h-10 m-r-15">
-                                    <img src="{{ asset('assets/images/avatars/profile_image.jpg') }}" alt="">
+                                    <img src="{{ asset('public/assets/images/avatars/profile_image.jpg') }}" alt="">
                                 </div>
                             </div>
                             <div class="p-b-15 p-t-20 dropdown-menu pop-profile">
                                 <div class="p-h-20 p-b-15 m-b-10 border-bottom">
                                     <div class="d-flex m-r-50">
                                         <div class="avatar avatar-lg avatar-image">
-                                            <img src="{{ asset('assets/images/avatars/profile_image.jpg') }}"
+                                            <img src="{{ asset('public/assets/images/avatars/profile_image.jpg') }}"
                                                 alt="">
                                         </div>
                                         <div class="m-l-10">

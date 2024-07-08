@@ -110,7 +110,7 @@ class NewsController extends Controller
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
                 $filename = uniqid() . '.' . $extension;
-                $file->move('News/Image', $filename);
+                $file->move('public/News/Image', $filename);
                 $news->image = $filename;
             }
             $news->description = $request->description;
@@ -153,13 +153,13 @@ class NewsController extends Controller
             $newsUpdate = News::where('id', $id)->first();
             $newsUpdate->title = $request->title;
             if ($request->hasFile('image')) {
-                if (File::exists(public_path('News/Image/' . $newsUpdate->image))) {
-                    unlink(public_path('News/Image/' . $newsUpdate->image));
+                if (File::exists(public_path('public/News/Image/' . $newsUpdate->image))) {
+                    unlink(public_path('public/News/Image/' . $newsUpdate->image));
                 }
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
                 $filename = uniqid() . '.' . $extension;
-                $file->move('News/Image', $filename);
+                $file->move('public/News/Image', $filename);
                 $newsUpdate->image = $filename;
             }
             $newsUpdate->description = $request->description;
@@ -178,8 +178,8 @@ class NewsController extends Controller
     {
         try {
             $newsDelete = News::where('id', base64_decode($request->id))->first();
-            if (File::exists(public_path('News/Image/' . $newsDelete->image))) {
-                unlink(public_path('News/Image/' . $newsDelete->image));
+            if (File::exists(public_path('public/News/Image/' . $newsDelete->image))) {
+                unlink(public_path('public/News/Image/' . $newsDelete->image));
             }
             $newsDelete->delete();
             return redirect()->route('admin.news.index')->with('success', "News deleted successfully!");

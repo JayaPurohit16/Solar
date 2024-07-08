@@ -89,8 +89,8 @@ Route::prefix('admin')->middleware('admin')->name('admin.')->group(function () {
         Route::delete('/delete/{id}', [CategoryController::class, 'delete'])->name('delete');
     });
 
-    // Services Route
-    Route::prefix('services')->name('services.')->group(function () {
+    // Product Route
+    Route::prefix('product')->name('services.')->group(function () {
         Route::get('/', [ServicesController::class, 'index'])->name('index');
         Route::get('/list', [ServicesController::class, 'list'])->name('list');
         Route::get('/create', [ServicesController::class, 'create'])->name('create');
@@ -101,7 +101,7 @@ Route::prefix('admin')->middleware('admin')->name('admin.')->group(function () {
     });
 
     // Questions Route
-    Route::prefix('questions')->name('questions.')->group(function () {
+    Route::prefix('faq')->name('questions.')->group(function () {
         Route::get('/', [QuestionsController::class, 'index'])->name('index');
         Route::get('/list', [QuestionsController::class, 'list'])->name('list');
         Route::get('/create', [QuestionsController::class, 'create'])->name('create');
@@ -143,12 +143,12 @@ Route::name('frontend.')->group(function () {
 
     // Products Route
     Route::name('news.')->group(function () {
-        Route::get('/news-page', [NewsController::class, 'index'])->name('index');
+        Route::get('/news', [NewsController::class, 'index'])->name('index');
         Route::get('/news-detail/{id}', [NewsController::class, 'detail'])->name('detail');
     });
 
     // Project Route
     Route::name('project.')->group(function () {
-        Route::get('/projects/{id}', [FrontendProjectController::class, 'index'])->name('index');
+        Route::get('/project/{id}', [FrontendProjectController::class, 'index'])->name('index');
     });
 });

@@ -8,10 +8,10 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="articl-sec-card news-card-mb">
                                 @if (isset($news->image) && file_exists(public_path('News/Image/' . $news->image)))
-                                    <img class="articl-bg-img" src="{{ asset('News/Image/' . $news->image) }}"
+                                    <img class="articl-bg-img" src="{{ asset('public/News/Image/' . $news->image) }}"
                                         alt="Articl Image">
                                 @else
-                                    <img class="articl-bg-img" src="{{ asset('frontend/assets/image/articl-img.jpg') }}"
+                                    <img class="articl-bg-img" src="{{ asset('public/frontend/assets/image/articl-img.jpg') }}"
                                         alt="Articl Image">
                                 @endif
                                 <div class="articl-sec-card-bg">
@@ -20,7 +20,7 @@
                                     </h2>
                                     <div class="articl-sec-flex">
                                         <span><a href="{{ route('frontend.news.detail', base64_encode($news->id)) }}"><img
-                                                    src="{{ asset('frontend/assets/image/icon/calendar-icon.svg') }}"
+                                                    src="{{ asset('public/frontend/assets/image/icon/calendar-icon.svg') }}"
                                                     alt="">{{ isset($news->date) ? \Carbon\Carbon::parse($news->date)->format('F d, Y') : '' }}</a></span>
                                     </div>
                                     <a href="{{ route('frontend.news.detail', base64_encode($news->id)) }}"><button

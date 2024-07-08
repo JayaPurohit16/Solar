@@ -114,7 +114,7 @@
                             <input type="file" class="form-control" name="image">
                             @if (isset($projectEdit->image) && file_exists(public_path('Project/Image/' . $projectEdit->image)))
                                 <div class="mt-3">
-                                    <img src="{{ asset('Project/Image/' . $projectEdit->image) }}" alt=""
+                                    <img src="{{ asset('public/Project/Image/' . $projectEdit->image) }}" alt=""
                                         height="100" width="100">
                                 </div>
                             @else
@@ -135,7 +135,7 @@
                                         @if (isset($galleryImages->gallery_images) &&
                                                 file_exists(public_path('Project/GalleryImage/' . $galleryImages->gallery_images)))
                                             <div class="remove-image mt-3">
-                                                <img src="{{ asset('Project/GalleryImage/' . $galleryImages->gallery_images) }}"
+                                                <img src="{{ asset('public/Project/GalleryImage/' . $galleryImages->gallery_images) }}"
                                                     height="120" width="120" style="border-radius: 15px;"
                                                     class="hidden_gallery_images">
                                                 <a class="delete-icon" href="#"

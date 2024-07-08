@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Cms extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory, SoftDeletes;
+
+    public function getCountryCode()
+    {
+        return $this->hasOne(Country::class, 'id', 'country_code');
+    }
 }

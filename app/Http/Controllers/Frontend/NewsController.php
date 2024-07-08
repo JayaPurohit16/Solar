@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cms;
 use App\Models\News;
 use Exception;
 use Illuminate\Http\Request;
@@ -29,7 +30,8 @@ class NewsController extends Controller
     {
         try {
             $newsDetail = News::where('id', base64_decode($id))->first();
-            return view('frontend.news.detail', compact('newsDetail'));
+            $cms = Cms::first();
+            return view('frontend.news.detail', compact('newsDetail', 'cms'));
         } catch (Exception $e) {
             Log::error('News Detail Index Page Error : ' . $e->getMessage());
             return redirect()->back();

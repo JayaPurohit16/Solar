@@ -6,16 +6,17 @@
                 <div class="col-lg-6">
                     <div class="bg-img">
                         <div class="left-img">
-                            <img src="{{ asset('frontend/assets/image/about-one-img.jpg') }}" alt="About One">
+                            <img src="{{ asset('public/frontend/assets/image/about-one-img.jpg') }}" alt="About One">
                         </div>
                         <div class="right-img">
-                            <img src="{{ asset('frontend/assets/image/about-two-img.jpg') }}" alt="About Two">
+                            <img src="{{ asset('public/frontend/assets/image/about-two-img.jpg') }}" alt="About Two">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-text">
-                        <span><img src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="Sub-icon">About
+                        <span><img src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}"
+                                alt="Sub-icon">About
                             us</span>
                         <h2>About Green Energy Solar</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -32,21 +33,22 @@
 
                             <div class="about-list">
                                 <span><img width="20px" height="21px"
-                                        src="{{ asset('frontend/assets/image/icon/check-icon.svg') }}"
+                                        src="{{ asset('public/frontend/assets/image/icon/check-icon.svg') }}"
                                         alt="Check Icon">Solar Inverter
                                     Setup</span>
                                 <span><img width="20px" height="21px"
-                                        src="{{ asset('frontend/assets/image/icon/check-icon.svg') }}"
+                                        src="{{ asset('public/frontend/assets/image/icon/check-icon.svg') }}"
                                         alt="Check Icon">Solar Material Financing</span>
                             </div>
 
 
                             <div class="about-list">
                                 <span><img width="20px" height="21px"
-                                        src="{{ asset('frontend/assets/image/icon/check-icon.svg') }}"
+                                        src="{{ asset('public/frontend/assets/image/icon/check-icon.svg') }}"
                                         alt="Check Icon">Battery Storage Solutions</span>
                                 <span><img width="20px" height="21px"
-                                        src="{{ asset('frontend/assets/image/icon/check-icon.svg') }}" alt="Check Icon">24
+                                        src="{{ asset('public/frontend/assets/image/icon/check-icon.svg') }}"
+                                        alt="Check Icon">24
                                     X 7 Call & Chat Support</span>
                             </div>
                         </div>
@@ -61,7 +63,8 @@
         <div class="container">
 
             <div class="our-services-text">
-                <span><img src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="Sub-icon">Our product</span>
+                <span><img src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}" alt="Sub-icon">Our
+                    product</span>
                 <h2>Best Offer For Renewable Energy</h2>
             </div>
             <div class="swiper mySwiper">
@@ -71,14 +74,17 @@
                             <div class="silder-bg-img">
                                 <div class="main-img">
                                     @if (isset($product->image) && file_exists(public_path('Services/Image/' . $product->image)))
-                                        <img class="slider-img-sec" src="{{ asset('Services/Image/' . $product->image) }}"
+                                        <img class="slider-img-sec"
+                                            src="{{ asset('public/Services/Image/' . $product->image) }}"
                                             alt="Slider Image">
                                     @else
                                         <img class="slider-img-sec"
-                                            src="{{ asset('frontend/assets/image/slider-img.jpg') }}" alt="Slider Image">
+                                            src="{{ asset('public/frontend/assets/image/slider-img.jpg') }}"
+                                            alt="Slider Image">
                                     @endif
                                     <a href="#" class="bg-color-slider">
-                                        <img src="{{ asset('frontend/assets/image/svg/slider-svg.svg') }}" alt="Icon">
+                                        <img src="{{ asset('public/frontend/assets/image/svg/slider-svg.svg') }}"
+                                            alt="Icon">
                                     </a>
 
                                     <div class="slider-card">
@@ -220,7 +226,7 @@
     <section class="our-latest coomen-index-padding animate__animated animate__fadeInUpBig wow">
         <div class="container">
             <div class="our-latest-text">
-                <span><img src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="Sub Image">OUR LATEST
+                <span><img src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}" alt="Sub Image">OUR LATEST
                     PROCESS</span>
                 <h2>Lorem ipsum dolor</h2>
             </div>
@@ -229,7 +235,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="card-item">
                             <div class="card-bg-color">
-                                <img src="{{ asset('frontend/assets/image/our-latest-img.svg') }}" alt="">
+                                <img src="{{ asset('public/frontend/assets/image/our-latest-img.svg') }}" alt="">
                                 <div class="card-bg-raund">
                                     <span>01</span>
                                 </div>
@@ -241,7 +247,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="card-item card-item-one">
                             <div class="card-bg-color">
-                                <img src="{{ asset('frontend/assets/image/our-latest-1-img.svg') }}" alt="">
+                                <img src="{{ asset('public/frontend/assets/image/our-latest-1-img.svg') }}" alt="">
                                 <div class="card-bg-raund">
                                     <span>02</span>
                                 </div>
@@ -253,7 +259,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="card-item card-item-two">
                             <div class="card-bg-color">
-                                <img src="{{ asset('frontend/assets/image/our-latest-2-img.svg') }}" alt="">
+                                <img src="{{ asset('public/frontend/assets/image/our-latest-2-img.svg') }}" alt="">
                                 <div class="card-bg-raund">
                                     <span>03</span>
                                 </div>
@@ -271,9 +277,9 @@
         <div class="container">
             <div class="video-men" style="position: relative;">
                 <div class="video-bgimg">
-                    <img src="{{ asset('frontend/assets/image/video-bg-img.jpg') }}" alt="">
+                    <img src="{{ asset('public/frontend/assets/image/video-bg-img.jpg') }}" alt="">
                     <div type="button" class="btn video-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <img src="{{ asset('frontend/assets/image/svg/video-svg.svg') }}" alt="Video Svg">
+                        <img src="{{ asset('public/frontend/assets/image/svg/video-svg.svg') }}" alt="Video Svg">
                     </div>
 
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
@@ -292,10 +298,10 @@
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <!-- <div class="modal-footer">
-                                                                                                                                                                                                                                                                                                                                                                    <button type="button" class="btn btn-secondary"
-                                                                                                                                                                                                                                                                                                                                                                        data-bs-dismiss="modal">Close</button>
-                                                                                                                                                                                                                                                                                                                                                                    <button type="button" class="btn btn-primary">Understood</button>
-                                                                                                                                                                                                                                                                                                                                                                </div> -->
+                                                                                                                                                                                                                                                                                                                                                                        <button type="button" class="btn btn-secondary"
+                                                                                                                                                                                                                                                                                                                                                                            data-bs-dismiss="modal">Close</button>
+                                                                                                                                                                                                                                                                                                                                                                        <button type="button" class="btn btn-primary">Understood</button>
+                                                                                                                                                                                                                                                                                                                                                                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -315,7 +321,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="energy-flex-text">
-                            <span><img src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}"
+                            <span><img src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}"
                                     alt="">ENERGY PROGRESS</span>
                             <h3>Best Solution For Your Solar
                                 Energy</h3>
@@ -365,11 +371,11 @@
             <div class="have-questions-bg">
                 <div class="have-questions-flex">
                     <div class="have-questions-img">
-                        <img src="{{ asset('frontend/assets/image/have-questions-img.jpg') }}" alt=" Image">
+                        <img src="{{ asset('public/frontend/assets/image/have-questions-img.jpg') }}" alt=" Image">
                     </div>
                     <div class="have-questions-btn">
                         <div class="have-questions-button-bg">
-                            <img src="{{ asset('frontend/assets/image/svg/have-svg.svg') }}" alt="">
+                            <img src="{{ asset('public/frontend/assets/image/svg/have-svg.svg') }}" alt="">
                         </div>
                     </div>
                     <div class="have-questions-right-text">
@@ -386,7 +392,8 @@
         <div class="container">
 
             <div class="why-choose-sec-text">
-                <span><img src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="">WHY CHOOSE
+                <span><img src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}" alt="">WHY
+                    CHOOSE
                     US</span>
                 <h2>Providing Solar Energy Solutions</h2>
             </div>
@@ -395,12 +402,12 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="why-choose-card">
                             <img width="60px" height="60px"
-                                src="{{ asset('frontend/assets/image/svg/choose-svg.svg') }}" alt="">
+                                src="{{ asset('public/frontend/assets/image/svg/choose-svg.svg') }}" alt="">
                             <h5> Efficiency & Power</h5>
                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed mauris a nisl.
                             </p>
                             <figure class="image-hover"><img loading="lazy" decoding="async" width="600"
-                                    height="554" src="{{ asset('frontend/assets/image/img-hover.jpg') }}"
+                                    height="554" src="{{ asset('public/frontend/assets/image/img-hover.jpg') }}"
                                     class="attachment- size-" />
                             </figure>
                         </div>
@@ -410,12 +417,12 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="why-choose-card">
                             <img width="60px" height="60px"
-                                src="{{ asset('frontend/assets/image/svg/choose-svg-1.svg') }}" alt="">
+                                src="{{ asset('public/frontend/assets/image/svg/choose-svg-1.svg') }}" alt="">
                             <h5>Trust & Warranty</h5>
                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed mauris a nisl.
                             </p>
                             <figure class="image-hover"><img loading="lazy" decoding="async" width="600"
-                                    height="554" src="{{ asset('frontend/assets/image/hover-img1.jpg') }}"
+                                    height="554" src="{{ asset('public/frontend/assets/image/hover-img1.jpg') }}"
                                     class="attachment- size-" alt="">
                             </figure>
                         </div>
@@ -423,12 +430,12 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="why-choose-card">
                             <img width="60px" height="60px"
-                                src="{{ asset('frontend/assets/image/svg/choose-svg-2.svg') }}" alt="">
+                                src="{{ asset('public/frontend/assets/image/svg/choose-svg-2.svg') }}" alt="">
                             <h5>High Quality Work</h5>
                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed mauris a nisl.
                             </p>
                             <figure class="image-hover"><img loading="lazy" decoding="async" width="600"
-                                    height="554" src="{{ asset('frontend/assets/image/hover-img2.jpg') }}"
+                                    height="554" src="{{ asset('public/frontend/assets/image/hover-img2.jpg') }}"
                                     class="attachment- size-" alt="">
                             </figure>
                         </div>
@@ -436,12 +443,12 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="why-choose-card">
                             <img width="60px" height="60px"
-                                src="{{ asset('frontend/assets/image/svg/choose-svg-3.svg') }}" alt="">
+                                src="{{ asset('public/frontend/assets/image/svg/choose-svg-3.svg') }}" alt="">
                             <h5>24*7 Support</h5>
                             <p>Ut ut eros risus. In luctus fringilla augue, eget ultricies purus. Sed mauris a nisl.
                             </p>
                             <figure class="image-hover"><img loading="lazy" decoding="async" width="600"
-                                    height="554" src="{{ asset('frontend/assets/image/hover-img3.jpg') }}"
+                                    height="554" src="{{ asset('public/frontend/assets/image/hover-img3.jpg') }}"
                                     class="attachment- size-" alt="">
                             </figure>
                         </div>
@@ -458,7 +465,8 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="section-sec-card">
                             <div class="card-img">
-                                <img src="{{ asset('frontend/assets/image/svg/section-sec.svg') }}" alt="">
+                                <img src="{{ asset('public/frontend/assets/image/svg/section-sec.svg') }}"
+                                    alt="">
                             </div>
                             <div class="card-text">
                                 <span id="count1">+</span>
@@ -469,7 +477,8 @@
                     <div class="col-lg-3 col-sm-6 ">
                         <div class="section-sec-card">
                             <div class="card-img">
-                                <img src="{{ asset('frontend/assets/image/svg/section-sec-1.svg') }}" alt="">
+                                <img src="{{ asset('public/frontend/assets/image/svg/section-sec-1.svg') }}"
+                                    alt="">
                             </div>
                             <div class="card-text">
                                 <span id="count2">+</span>
@@ -480,7 +489,8 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="section-sec-card">
                             <div class="card-img">
-                                <img src="{{ asset('frontend/assets/image/svg/section-sec-2.svg') }}" alt="">
+                                <img src="{{ asset('public/frontend/assets/image/svg/section-sec-2.svg') }}"
+                                    alt="">
                             </div>
                             <div class="card-text">
                                 <span id="count3">+</span>
@@ -491,7 +501,8 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="section-sec-card">
                             <div class="card-img">
-                                <img src="{{ asset('frontend/assets/image/svg/section-sec.svg') }}" alt="">
+                                <img src="{{ asset('public/frontend/assets/image/svg/section-sec.svg') }}"
+                                    alt="">
                             </div>
                             <div class="card-text">
                                 <span id="count4"></span>
@@ -510,7 +521,7 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="calculator-sec-text">
-                            <span><img src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}"
+                            <span><img src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}"
                                     alt="">SOLAR CALCULATOR</span>
                             <h2>Your Solar Savings Calculator</h2>
                         </div>
@@ -564,7 +575,7 @@
     <section class="articl-sec coomen-index-padding">
         <div class="container">
             <div class="articl-sec-text">
-                <span><img src="{{ asset('frontend/assets/image/sub-heading-img.svg') }}" alt="">RECENT
+                <span><img src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}" alt="">RECENT
                     ARTICLES</span>
                 <h2>Our Latest News</h2>
             </div>
@@ -573,16 +584,16 @@
                     <div class="col-lg-4">
                         <div class="articl-sec-card">
                             @if (isset($news->image) && file_exists(public_path('News/Image/' . $news->image)))
-                                <img class="articl-bg-img" src="{{ asset('News/Image/' . $news->image) }}"
+                                <img class="articl-bg-img" src="{{ asset('public/News/Image/' . $news->image) }}"
                                     alt="Articl Image">
                             @else
-                                <img class="articl-bg-img" src="{{ asset('frontend/assets/image/articl-img.jpg') }}"
-                                    alt="Articl Image">
+                                <img class="articl-bg-img"
+                                    src="{{ asset('public/frontend/assets/image/articl-img.jpg') }}" alt="Articl Image">
                             @endif
                             <div class="articl-sec-card-bg">
                                 <h2>{{ isset($news->title) ? $news->title : '' }}</h2>
                                 <div class="articl-sec-flex">
-                                    <span><img src="{{ asset('frontend/assets/image/icon/calendar-icon.svg') }}"
+                                    <span><img src="{{ asset('public/frontend/assets/image/icon/calendar-icon.svg') }}"
                                             alt="">{{ isset($news->date) ? \Carbon\Carbon::parse($news->date)->format('F d, Y') : '' }}</span>
                                     {{-- <span><img src="{{ asset('frontend/assets/image/icon/price-tag-icon.svg') }}"
                                             alt="">Uncategorized</span> --}}
