@@ -1,7 +1,4 @@
 @media (max-width: 1900px) {
-    /* .right-img img{
-        bottom: -15%;
-    }  */
     .swiper-horizontal {
         min-height: 550px;
     }
@@ -25,22 +22,22 @@
 
 @media (max-width: 1199.98px) {
     .coomen-index-padding {
-        padding: 0 20px;
+        padding: 0;
+    }
+
+    .top-bar {
+        padding-top: 15px !important;
+    }
+
+    .navbar-bg-white {
+        margin-top: 15px;
+        border-radius: 15px;
     }
 
     .articl-sec-flex {
         flex-direction: column;
         align-items: start;
     }
-
-    .right-img img {
-        right: -9%;
-        bottom: 3%;
-    }
-
-    /* .bg-img {
-        background-image: none;
-    } */
 
     .top-bar {
         padding-top: 20px;
@@ -74,6 +71,19 @@
     .news-right-card {
         padding-left: 0;
     }
+
+    .hero-container {
+        padding: 0;
+    }
+
+    .big-circle {
+        padding: 40px;
+    }
+
+    .process-step-arrow {
+        max-width: 80px;
+        max-height: 40px;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -84,23 +94,12 @@
     }
 
     .about-text {
-        margin-top: 150px;
+        padding-top: 0;
+        margin-top: 20px;
     }
 
     .story-text {
         margin-top: 0;
-    }
-
-    /* .bg-img {
-        background-position: 60% 30px;
-    } */
-
-    .right-img img {
-        right: 17%;
-        bottom: -19%;
-        max-width: 340px;
-        width: 100%;
-        height: 240px;
     }
 
     .about-text {
@@ -148,7 +147,7 @@
     }
 
     .have-questions-button-bg {
-        margin-top: -57px;
+        margin-top: -45px;
         margin-left: -8%;
     }
 
@@ -190,9 +189,52 @@
     .news-right-card {
         margin-bottom: 0 !important;
     }
+
+    .news-quote {
+        border-radius: 15px;
+        padding: 30px 40px;
+    }
+
+    .news-detail-header-main-canten .canten-text h1 {
+        font-size: 56px;
+    }
+
+    .card-img {
+        border-radius: 15px;
+    }
+
+    .copy-right {
+        margin: 0;
+        padding: 0;
+    }
+
+    .copy-right-bg {
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+    .about-the-page-section {
+        padding: 0 10px;
+    }
+
+    .first-data-box {
+        border-radius: 35px 35px 0 0;
+    }
+
+    .third-data-box {
+        border-radius: 0 0 35px 35px;
+    }
+
+    .video-play {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 767.98px) {
+    .leadership-bg {
+        min-height: 400px;
+    }
+
     .top-bar-icon {
         display: none;
     }
@@ -205,60 +247,125 @@
         margin: 50px 0;
     }
 
-    .right-img img {
-        order: 2;
+    .about-the-page {
+        padding: 15px;
+        border-radius: 20px;
     }
 
     .about-text span {
         order: 1;
     }
 
-    /* .bg-img {
-        background-position: 75% 30px;
-        display: block;
-    } */
     .swiper-horizontal {
         min-height: 670px;
     }
+
+    .main-img {
+        border-radius: 15px;
+    }
+
+    .bg-color-slider {
+        border-radius: 15px;
+        max-width: 20%;
+        min-height: 12%;
+    }
+
+    .slider-card {
+        border-radius: 15px;
+    }
+
     .our-services {
         padding-bottom: 60px !important;
     }
-    .card-img {
-        border-radius: 20px;
+
+    .news-quote {
+        padding: 20px;
+    }
+
+    .news-quote h1 {
+        font-size: 22px;
+    }
+
+    .news-detail-header-main-canten {
+        margin: 50px 0;
+        width: 100%;
+    }
+
+    .news-detail-header-main-canten .canten-text h1 {
+        font-size: 30px;
+    }
+
+    .news-detail-header-main-canten .canten-text .leadership-list ol {
+        flex-wrap: wrap;
+    }
+
+    .top-bar-list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sub-main-heading {
+        font-size: 36px;
+    }
+
+    .first-data-box .data-box-heading h3,
+    .second-data-box .data-box-heading h3,
+    .third-data-box .data-box-heading h3 {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .left-img img,
+    .right-img {
+        border-radius: 15px;
     }
 }
 
 @media (max-width: 575.98px) {
+    .navbar-toggler {
+        padding: 5px;
+    }
+
     .navbar-brand img {
         max-width: 106px;
+    }
+
+    .hero-img {
+        min-height: 400px;
+    }
+
+    .main-canten {
+        margin: 45px 0 0;
     }
 
     .canten-text h1 {
         font-size: 30px;
     }
 
-    .conten-text p {
-        font-size: 16px;
+    .canten-text p {
+        font-size: 14px;
     }
 
     .canten-btn {
         flex-direction: column;
     }
 
-    .right-img img {
-        max-width: 250px;
-        min-height: 198px;
+    .about-text h2 {
+        font-size: 30px;
     }
 
-    .left-img img {
-        max-width: 370px;
-        min-height: 400px;
+    .about-the-page h2 {
+        font-size: 18px;
+    }
+
+    .about-page-data h6 {
+        font-size: 16px;
     }
 
     .about-text-list {
         gap: 0;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-start !important;
     }
 
     .have-questions-right-text {
@@ -269,37 +376,109 @@
         font-size: 30px;
     }
 
-    .calculator-sec-bg {
-        padding: 25px 10px;
-        padding-bottom: 60px;
-    }
-
     .why-choose-sec-text h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .why-choose-sec-text {
         padding-top: 50px;
     }
 
+    .why-choose-card,
+    .why-choose-card::before {
+        border-radius: 15px;
+    }
+
+    .our-latest {
+        margin-top: 40px;
+    }
+
     .our-latest h2 {
-        font-size: 36px;
+        font-size: 30px;
+    }
+
+    .our-latest-card {
+        margin: 40px 0;
+    }
+
+    .section-sec {
+        padding-top: 30px;
+    }
+
+    .card-bg-color {
+        width: 95px;
+        border-radius: 15px;
+    }
+
+    .card-bg-color img {
+        max-width: 45px;
+        aspect-ratio: 1;
+    }
+
+    .video-bgimg img {
+        border-radius: 15px;
+    }
+
+    .video-bgimg::after {
+        border-radius: 15px;
+    }
+
+    .energy-sec {
+        margin: 50px 0 40px;
+    }
+
+    .have-questions-bg {
+        border-radius: 15px;
+        margin: 10px 0 40px;
+    }
+
+    .have-questions-img img {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .energy-flex-text h3 {
+        font-size: 30px;
+        margin-bottom: 15px;
     }
 
     .our-services-text h2 {
-        font-size: 34px;
+        font-size: 30px;
     }
 
     .our-services-text {
         padding-top: 50px;
     }
 
+    .calculator-sec {
+        margin: 40px 0;
+    }
+
+    .calculator-sec-bg {
+        border-radius: 15px;
+        padding: 25px 10px;
+        padding-bottom: 60px;
+    }
+
     .calculator-sec-text h2 {
         font-size: 30px;
     }
 
+    .articl-sec-text {
+        margin: 40px 0;
+    }
+
     .articl-sec-text h2 {
         font-size: 40px;
+    }
+
+    .articl-sec-card,
+    .articl-sec-card img {
+        border-radius: 15px;
+    }
+
+    .articl-sec-card-bg {
+        border-radius: 15px;
+        padding: 15px;
     }
 
     .objective-sec-text h2 {
@@ -307,7 +486,7 @@
     }
 
     .about-text p {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .con-bg {
@@ -323,15 +502,11 @@
     }
 
     .footer-sec p {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .footer-sec span {
         font-size: 14px;
-    }
-
-    .about-us {
-        margin-top: 50px;
     }
 
     .why-choose-sec {
@@ -357,7 +532,7 @@
     }
 
     .leadership-conten {
-        margin-top: 80px;
+        margin-top: 40px;
     }
 
     .our-services {
@@ -365,40 +540,107 @@
     }
 
     .swiper-horizontal {
-        min-height: 700px;
+        min-height: 560px;
     }
 
     .news-details {
-        padding: 50px 0;
+        padding: 20px 0;
     }
 
-    .news-detail-img .image-anime {
-        border-radius: 10px;
-    }
-
-    .news-detail-img .image-anime,
-    .news-quote {
+    .leadership-img-card {
         border-radius: 15px;
+        margin-bottom: 15px;
+    }
+
+    .leadership-card-flex {
+        border-radius: 15px;
+    }
+
+    .top-bar-list {
+        gap: 10px !important;
+    }
+
+    .image-anime {
+        border-radius: 15px;
+    }
+
+    .news-details {
+        padding: 15px 0;
+    }
+
+    .top-bar {
+        padding: 0;
+    }
+
+    .hero-section {
+        min-height: 500px;
+        gap: 1px;
+    }
+
+    .main-heading {
+        font-size: 30px;
+        padding: 0 20px;
+    }
+
+    .hero-section-buttons a {
+        margin-top: 60px;
+        padding: 10px 25px;
+    }
+
+    .hero-section-paragraph {
+        font-size: 14px;
+        text-align: justify !important;
+        color: #fff;
+        padding: 15px;
+    }
+
+    .big-circle {
+        max-width: 265px;
+    }
+
+    .sustainable-future-data {
+        padding: 15px;
+    }
+
+    /* About The Company */
+    .story-bg-img,
+    .our-vision-flex,
+    .story-bg-img img,
+    .our-vision-flex img {
+        border-radius: 15px;
+    }
+
+    .objective-sec {
+        margin: 40px 0;
+    }
+
+    .objective-sec-img,
+    .objective-sec-img img {
+        border-radius: 15px;
+    }
+
+    .news-left-sec-bg {
+        border-radius: 15px;
+        padding: 10px 15px;
+    }
+
+    .new-left-img,
+    .news-right-text img {
+        border-radius: 15px;
+    }
+
+    .bg-img {
+        padding-bottom: 75px;
     }
 }
 
-/* @media (max-width:540px) {
-    .swiper-horizontal {
-        min-height: 650px;
-    }
-} */
-
 @media (max-width: 387px) {
     .top-bar-list {
-        gap: 0;
+        justify-content: flex-start;
     }
 
     .slider-card {
         padding: 15px;
-    }
-
-    .right-img img {
-        right: 10%;
     }
 
     .accordion-button {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}">
 
     <link rel="stylesheet" href="{{ asset('public/frontend/assets/css/bootstrap.min.css') }}">
 
@@ -69,9 +69,9 @@
             Request::route()->getName() == 'frontend.news.index' ||
             Request::route()->getName() == 'frontend.news.detail'
         )
-                <div class="hero-img leadership-bg">
+                <div class="hero-img">
     @endif
-            <div class="container">
+            <div class="container p-sm-1 p-0">
                 <div class="top-bar">
                     <div class="row">
                         <div class="col-md-6 top-bar-list">
@@ -95,25 +95,25 @@
                                     <a href="{{ isset($cms->facebook_link) ? $cms->facebook_link : '' }}"
                                         target="_blank"><img
                                             src="{{ asset('public/frontend/assets/image/icon/facebook-icon.svg') }}"
-                                            alt="Facebook Icon" width="14px" height="14px"></a>
+                                            alt="Facebook Icon" width="16px" height="16px"></a>
                                 </div>
                                 <div class="bg-color-icon">
                                     <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}"
                                         target="_blank"><img
                                             src="{{ asset('public/frontend/assets/image/icon/twitter-icon.svg') }}"
-                                            alt="Facebook Icon" width="14px" height="14px"></a>
+                                            alt="Facebook Icon" width="16px" height="16px"></a>
                                 </div>
                                 <div class="bg-color-icon">
                                     <a href="{{ isset($cms->linkedin_link) ? $cms->linkedin_link : '' }}"
                                         target="_blank"><img
                                             src="{{ asset('public/frontend/assets/image/icon/linkedin-icon.svg') }}"
-                                            alt="Facebook Icon" width="14px" height="14px"></a>
+                                            alt="Facebook Icon" width="16px" height="16px"></a>
                                 </div>
                                 <div class="bg-color-icon">
                                     <a href="{{ isset($cms->instagram_link) ? $cms->instagram_link : '' }}"
                                         target="_blank"><img
                                             src="{{ asset('public/frontend/assets/image/icon/instagram-icon.svg') }}"
-                                            alt="Facebook Icon" width="14px" height="14px"></a>
+                                            alt="Facebook Icon" width="16px" height="16px"></a>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,8 @@
                                             src="{{ asset('public/Cms/Logo/' . $cms->logo) }}" alt="Logo"></a>
                                 @else
                                     <a class="navbar-brand" href="{{ route('frontend.index') }}"><img
-                                            src="{{ asset('public/frontend/assets/image/solor-logo.svg') }}" alt="Logo"></a>
+                                            src="{{ asset('public/frontend/assets/image/icon/solor-logo.svg') }}"
+                                            alt="Logo"></a>
                                 @endif
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -135,7 +136,7 @@
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 align-items-center">
-                                        <li class="nav-item">
+                                        <li class="nav-item home-rel">
                                             <a class="nav-link {{ Request::route()->getName() == 'frontend.index' ? 'active' : '' }}"
                                                 aria-current="page" href="{{ route('frontend.index') }}">Home</a>
                                         </li>
@@ -206,7 +207,7 @@
                         )
                                             <div class="main-canten">
                                                 <div class="canten-text">
-                                                    <span><img src="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}"
+                                                    <span><img src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
                                                             alt="Heading Image">Welcome to solor</span>
                                                     <h1>Lorem ipsum dolor sit amet <span class="con-bg">consectetu</span></h1>
                                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda excepturi corrupti
@@ -228,7 +229,7 @@
                                 <div class="leadership-list">
                                     <ol>
                                         <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                        <li><img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
+                                        <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
                                                 alt=""></li>
                                         <li>Leadership</li>
                                     </ol>
@@ -242,10 +243,10 @@
                                 <div class="leadership-list">
                                     <ol>
                                         <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                        <li><img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
+                                        <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
                                                 alt=""></li>
                                         <li>Product</li>
-                                        <li><img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
+                                        <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
                                                 alt=""></li>
                                         <li>{{ isset($product->title) ? $product->title : '' }}</li>
                                     </ol>
@@ -253,19 +254,19 @@
                             </div>
                         </div>
                     @elseif (Request::route()->getName() == 'frontend.project.index')
-                        <div class="news-detail-header-main-canten leadership-conten">
+                        <div class="main-canten leadership-conten">
                             <div class="canten-text">
                                 <h1>Project</h1>
                                 <div class="leadership-list">
                                     <ol>
                                         <li><a href="{{ route('frontend.index') }}">Home</a></li>
                                         <li>
-                                            <img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
                                                 alt="" />
                                         </li>
                                         <li>Project</li>
                                         <li>
-                                            <img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
                                                 alt="" />
                                         </li>
                                         <li>{{ isset($project->title) ? $project->title : '' }}</li>
@@ -280,7 +281,7 @@
                                 <div class="leadership-list">
                                     <ol>
                                         <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                        <li><img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
+                                        <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
                                                 alt=""></li>
                                         <li>News</li>
                                     </ol>
@@ -288,7 +289,7 @@
                             </div>
                         </div>
                     @elseif (Request::route()->getName() == 'frontend.news.detail')
-                        <div class="news-detail-header-main-canten leadership-conten">
+                        <div class="main-canten leadership-conten">
                             <div class="canten-text">
                                 <h1>{{ isset($newsDetail->title) ? $newsDetail->title : '' }}</h1>
                                 <div class="leadership-list">
@@ -296,12 +297,12 @@
                                         <li>{{ isset($newsDetail->date) ? \Carbon\Carbon::parse($newsDetail->date)->format('F d.Y') : '' }}
                                         </li>
                                         <li>
-                                            <img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
                                                 alt="" />
                                         </li>
                                         <li>By awaiken</li>
                                         <li>
-                                            <img src="{{ asset('public/frontend/assets/image/svg/leadership-svg.svg') }}"
+                                            <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
                                                 alt="" />
                                         </li>
                                         <li>In Uncategorized</li>
