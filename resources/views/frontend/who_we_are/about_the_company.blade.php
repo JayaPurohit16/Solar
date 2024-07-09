@@ -15,18 +15,21 @@
             </div>
             <div class="col-lg-6">
                 <div class="about-text">
-                    <span><img src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
-                            alt="Sub-icon">Introduction</span>
-                    <h2>Lorem ipsum consectetur</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    <p class="canten-p fadeup-animation"><img
+                            src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
+                            alt="Sub-icon">Introduction</p>
+                    <h2 data-splitting class="onview-port">Lorem ipsum consectetur</h2>
+                    <p class="fadeup-animation-text onview-port">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum
                         has been
                         the industry’s standard dummy text ever since the 1500s, when an unknown printer took a
                         galley
                         of type and scrambled.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dignissimos cum mollitia
+                    <p class="fadeup-animation-text onview-port">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Sed dignissimos cum mollitia
                         recusandae,
                         reprehenderit ipsum omnis molestiae culpa iure explicabo.</p>
-                    <div class="about-text-list">
+                    <div class="about-text-list fadeup-animation-text onview-port">
 
                         <div class="about-list">
                             <span><img width="20px" height="21px"
@@ -49,7 +52,7 @@
                                 X 7 Call & Chat Support</span>
                         </div>
                     </div>
-                    <div class="about-btn">
+                    <div class="about-btn fadeup-animation-text onview-port">
                         <button>More About</button>
                     </div>
                 </div>
@@ -64,15 +67,18 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="about-text story-text">
-                    <span><img src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
+                    <p class="canten-p fadeup-animation onview-port"><img
+                            src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
                             alt="Sub-icon">Our
-                        Story</span>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        Story</p>
+                    <p class="fadeup-animation-text onview-port">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has
                         been
                         the industry’s standard dummy text ever since the 1500s, when an unknown printer took a
                         galley
                         of type and scrambled.</p>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dignissimos cum mollitia
+                    <p class="fadeup-animation-text onview-port"> Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Sed dignissimos cum mollitia
                         recusandae, reprehenderit ipsum omnis molestiae culpa iure explicabo Lorem ipsum dolor sit
                         amet
                         consectetur adipisicing elit. Sed dignissimos cum mollitia recusandae, reprehenderit ipsum
@@ -103,15 +109,18 @@
             </div>
             <div class="col-md-6">
                 <div class="about-text story-text">
-                    <span><img src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
+                    <p class="canten-p fadeup-animation onview-port"><img
+                            src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
                             alt="Sub-icon">Our
-                        Vision</span>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        Vision</p>
+                    <p class="fadeup-animation-text onview-port">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has
                         been
                         the industry’s standard dummy text ever since the 1500s, when an unknown printer took a
                         galley.
                     </p>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dignissimos cum mollitia
+                    <p class="fadeup-animation-text onview-port"> Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Sed dignissimos cum mollitia
                         recusandae, reprehenderit ipsum omnis molestiae culpa iure explicabo Lorem ipsum dolor sit.
                     </p>
                 </div>
@@ -123,10 +132,11 @@
 <section class="why-choose-sec">
     <div class="container p-sm-1 p-0">
         <div class="why-choose-sec-text">
-            <span><img src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}" alt="">Mission</span>
-            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p class="canten-p fadeup-animation text-our-center onview-port"><img
+                    src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}" alt="">Mission</p>
+            <h2 data-splitting class="onview-port">Lorem ipsum dolor sit amet.</h2>
         </div>
-        <div class="why-choose-sec-card">
+        <div class="why-choose-sec-card fadeup-animation-card onview-port">
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="why-card-mb">
@@ -187,10 +197,11 @@
             </div>
             <div class="col-lg-6">
                 <div class="objective-sec-text">
-                    <span><img src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
-                            alt="">objective</span>
-                    <h2>Lorem ipsum dolor sit Lorem, ipsum.</h2>
-                    <ul>
+                    <p class="canten-p fadeup-animation onview-port"><img
+                            src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}" alt="">objective
+                    </p>
+                    <h2 data-splitting class="onview-port">Lorem ipsum dolor sit Lorem, ipsum.</h2>
+                    <ul class="fadeup-animation-text onview-port">
                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
                         <li>perspiciatis delectus animi commodi reiciendis molestiae ipsa odio.</li>
                         <li> rerum facere vero alias blanditiis excepturi saepe, voluptates</li>

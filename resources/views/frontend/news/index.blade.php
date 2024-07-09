@@ -1,6 +1,6 @@
 @extends('frontend.layouts.main')
 @section('main')
-<section class="articl-sec coomen-index-padding">
+<section class="articl-sec coomen-index-padding fadeup-animation-card onview-port">
     <div class="container p-sm-1 p-0">
         <div class="news-artical-mt">
             <div class="row">

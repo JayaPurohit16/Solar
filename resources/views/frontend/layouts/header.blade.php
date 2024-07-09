@@ -14,26 +14,26 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Rubik Fonst-Link -->
+    <!-- Rubik Font CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 
-    <!-- rajdhari-Font -->
+    <!-- Rajdhani Font CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- remix Icon -->
+    <!-- Remix Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 
     <!-- Swiper Slider Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
-    <!-- Animate Css Link -->
+    <!-- Animate CSS Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
@@ -41,10 +41,10 @@
     <!-- Image Slider Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-    <!-- css-file Link -->
+    <!-- CSS File Link -->
     <link rel="stylesheet" href="{{ asset('public/frontend/assets/css/style.css') }}">
 
-    <!-- responsive Link -->
+    <!-- Responsive Link -->
     <link rel="stylesheet" href="{{ asset('public/frontend/assets/css/responsive.css') }}">
 
 </head>
@@ -69,7 +69,7 @@
             Request::route()->getName() == 'frontend.news.index' ||
             Request::route()->getName() == 'frontend.news.detail'
         )
-                <div class="hero-img">
+                <div class="hero-img leadership-bg">
     @endif
             <div class="container p-sm-1 p-0">
                 <div class="top-bar">
@@ -207,16 +207,19 @@
                         )
                                             <div class="main-canten">
                                                 <div class="canten-text">
-                                                    <span><img src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
-                                                            alt="Heading Image">Welcome to solor</span>
-                                                    <h1>Lorem ipsum dolor sit amet <span class="con-bg">consectetu</span></h1>
-                                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda excepturi corrupti
+                                                    <p class="canten-p fadeup-animation onview-port"><img
+                                                            src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
+                                                            alt="Heading Image">Welcome to solor</p>
+                                                    <h1 data-splitting class="onview-port">Lorem ipsum dolor sit amet <span
+                                                            class="con-bg">consectetu</span></h1>
+                                                    <p class="fadeup-animation-text onview-port">Lorem ipsum, dolor sit amet consectetur
+                                                        adipisicing elit. Assumenda excepturi corrupti
                                                         harum
                                                         eveniet quae fugit. Ad tempora tempore omnis numquam! Lorem ipsum dolor sit amet
                                                         consectetur
                                                         adipisicing elit.</p>
 
-                                                    <div class="canten-btn">
+                                                    <div class="canten-btn fadeup-animation-text onview-port">
                                                         <button class="services-btn">Our Services</button>
                                                         <button class="contactnow-btn">Contact Now</button>
                                                     </div>
@@ -225,8 +228,8 @@
                     @elseif (Request::route()->getName() == 'frontend.who-we-are.leadership')
                         <div class="main-canten leadership-conten">
                             <div class="canten-text">
-                                <h1>Leadership</h1>
-                                <div class="leadership-list">
+                                <h1 data-splitting class="onview-port">Leadership</h1>
+                                <div class="leadership-list fadeup-animation-text onview-port">
                                     <ol>
                                         <li><a href="{{ route('frontend.index') }}">Home</a></li>
                                         <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
@@ -239,8 +242,8 @@
                     @elseif (Request::route()->getName() == 'frontend.products.index')
                         <div class="main-canten leadership-conten">
                             <div class="canten-text">
-                                <h1>Product</h1>
-                                <div class="leadership-list">
+                                <h1 data-splitting class="onview-port">Product</h1>
+                                <div class="leadership-list fadeup-animation-text onview-port">
                                     <ol>
                                         <li><a href="{{ route('frontend.index') }}">Home</a></li>
                                         <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
@@ -256,8 +259,8 @@
                     @elseif (Request::route()->getName() == 'frontend.project.index')
                         <div class="main-canten leadership-conten">
                             <div class="canten-text">
-                                <h1>Project</h1>
-                                <div class="leadership-list">
+                                <h1 data-splitting class="onview-port">Project</h1>
+                                <div class="leadership-list fadeup-animation-text onview-port">
                                     <ol>
                                         <li><a href="{{ route('frontend.index') }}">Home</a></li>
                                         <li>
@@ -277,8 +280,8 @@
                     @elseif (Request::route()->getName() == 'frontend.news.index')
                         <div class="main-canten leadership-conten">
                             <div class="canten-text">
-                                <h1>News</h1>
-                                <div class="leadership-list">
+                                <h1 data-splitting class="onview-port">News</h1>
+                                <div class="leadership-list fadeup-animation-text onview-port">
                                     <ol>
                                         <li><a href="{{ route('frontend.index') }}">Home</a></li>
                                         <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
@@ -291,10 +294,13 @@
                     @elseif (Request::route()->getName() == 'frontend.news.detail')
                         <div class="main-canten leadership-conten">
                             <div class="canten-text">
-                                <h1>{{ isset($newsDetail->title) ? $newsDetail->title : '' }}</h1>
-                                <div class="leadership-list">
+                                <h1 data-splitting class="onview-port">
+                                    {{ isset($newsDetail->title) ? $newsDetail->title : '' }}
+                                </h1>
+                                <div class="leadership-list fadeup-animation-text onview-port">
                                     <ol>
-                                        <li>{{ isset($newsDetail->date) ? \Carbon\Carbon::parse($newsDetail->date)->format('F d.Y') : '' }}
+                                        <li class="bg-li">
+                                            {{ isset($newsDetail->date) ? \Carbon\Carbon::parse($newsDetail->date)->format('F d.Y') : '' }}
                                         </li>
                                         <li>
                                             <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
