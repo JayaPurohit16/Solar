@@ -10,8 +10,9 @@
     <title>Solar</title>
 
     <!-- Favicon -->
-    {{-- <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}"> --}}
-    <link rel="icon" type="image/x-icon" href="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}">
+    {{--
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}"> --}}
+    <link rel="icon" type="image/x-icon" href="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}">
 
     <!-- page css -->
 
@@ -44,8 +45,7 @@
                                                     class="form-control @error('email') is-invalid @enderror"
                                                     name="email" value="{{ old('email') }}" placeholder="Email">
                                             </div>
-                                            <label for="email" class="error"
-                                                style="display:none;color:red;"></label>
+                                            <label for="email" class="error" style="display:none;color:red;"></label>
                                         </div>
                                         <div class="form-group">
                                             <label class="font-weight-semibold" for="password">Password:</label>
@@ -57,8 +57,7 @@
                                                     class="form-control @error('password') is-invalid @enderror"
                                                     name="password" placeholder="Password">
                                             </div>
-                                            <label for="password" class="error"
-                                                style="display:none;color:red;"></label>
+                                            <label for="password" class="error" style="display:none;color:red;"></label>
                                         </div>
                                         <div class="form-group">
                                             <div class="d-flex align-items-center justify-content-between">

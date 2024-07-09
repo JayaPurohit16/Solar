@@ -18,7 +18,8 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="section-sec-card footer-sec">
                                 <div class="card-img">
-                                    <img src="{{ asset('public/frontend/assets/image/svg/footer-svg.svg') }}   " alt="">
+                                    <img src="{{ asset('public/frontend/assets/image/icon/footer-svg.svg') }}   "
+                                        alt="">
                                 </div>
                                 <div class="card-text footer-card-text">
                                     <p>Support & Email</p>
@@ -30,7 +31,7 @@
                         <div class="col-lg-4 col-md-6 ">
                             <div class="section-sec-card footer-sec">
                                 <div class="card-img">
-                                    <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-1.svg') }}" alt="">
+                                    <img src="{{ asset('public/frontend/assets/image/icon/footer-svg-1.svg') }}" alt="">
                                 </div>
                                 <div class="card-text footer-card-text">
                                     <p>Customer Support</p>
@@ -44,7 +45,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="section-sec-card footer-sec">
                                 <div class="card-img">
-                                    <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-2.svg') }}" alt="">
+                                    <img src="{{ asset('public/frontend/assets/image/icon/footer-svg-2.svg') }}" alt="">
                                 </div>
                                 <div class="card-text footer-card-text">
                                     <p>Our Location</p>
@@ -66,7 +67,7 @@
                             @if (isset($cms->footer_logo) && file_exists(public_path('Cms/FooterLogo/' . $cms->footer_logo)))
                                 <img src="{{ asset('public/Cms/FooterLogo/' . $cms->footer_logo) }}" alt="Footer Logo">
                             @else
-                                <img src="{{ asset('public/frontend/assets/image/footer-logo-img.svg') }}"
+                                <img src="{{ asset('public/frontend/assets/image/icon/footer-logo-img.svg') }}"
                                     alt="Footer Logo">
                             @endif
                             <p>Green Energy is a long established fact that a reader will be distracted by the
@@ -225,6 +226,9 @@
 </script>
 
 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 <!-- bootstrap-Js Link -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
@@ -236,15 +240,15 @@
 <!-- Swiper Slider Js Link -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
-
-<!-- WOW Cdn Link -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
-<script>
-    new WOW().init();
-</script>
-
 <!-- Image Slider JS Link -->
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+<!-- splitting js -->
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+<script src="https://unpkg.com/scroll-out/dist/scroll-out.js"></script>
+
+<!-- Waypoints -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
 <script>
     const lightbox = GLightbox({
@@ -254,6 +258,28 @@
         height: "90vh",
     });
 </script>
+
+<script>
+    var waypoints = $('.onview-port').waypoint(function (direction) {
+        $(this.element).addClass('animated');
+    }, {
+        offset: '95%'
+    })
+</script>
+
+<script>
+    Splitting();
+    ScrollOut({
+        targets: '[data-splitting]'
+    });
+</script>
+<script>
+    Splitting();
+    ScrollOut({
+        targets: '[.fadeup-animation]'
+    });
+</script>
+
 
 
 </body>
