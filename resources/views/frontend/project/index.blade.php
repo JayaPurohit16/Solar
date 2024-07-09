@@ -1,16 +1,16 @@
 @extends('frontend.layouts.main')
 @section('main')
 <section class="news-details">
-    <div class="container-xl">
+    <div class="container-xl p-0">
         <div class="row g-4">
-            <div class="col-lg-4 px-lg-4 px-0">
+            <div class="col-lg-4 col-12 about-the-page-section">
                 <div class="about-the-page">
                     <h2>About the project</h2>
                     <ul class="about-page-item-list">
                         @if (isset($project->project_date) && $project->project_date)
                             <li class="d-flex align-items-center gap-3 py-4">
                                 <div class="about-page-img d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('public/frontend/assets/imges/icon/project-date-icon.svg') }}"
+                                    <img src="{{ asset('public/frontend/assets/image/icon/project-date-icon.svg') }}"
                                         alt="" />
                                 </div>
                                 <div class="about-page-data">
@@ -23,7 +23,7 @@
                         @if (isset($project->energy_generation) && $project->energy_generation)
                             <li class="d-flex align-items-center gap-3 py-4">
                                 <div class="about-page-img d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('public/frontend/assets/imges/icon/energy-generation.svg') }}"
+                                    <img src="{{ asset('public/frontend/assets/image/icon/energy-generation.svg') }}"
                                         alt="" />
                                 </div>
                                 <div class="about-page-data">
@@ -35,7 +35,7 @@
                         @if (isset($project->category) && $project->category)
                             <li class="d-flex align-items-center gap-3 py-4">
                                 <div class="about-page-img d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('public/frontend/assets/imges/icon/category.svg') }}" alt="" />
+                                    <img src="{{ asset('public/frontend/assets/image/icon/category.svg') }}" alt="" />
                                 </div>
                                 <div class="about-page-data">
                                     <h6>Category:</h6>
@@ -46,7 +46,7 @@
                         @if (isset($project->client_company) && $project->client_company)
                             <li class="d-flex align-items-center gap-3 py-4">
                                 <div class="about-page-img d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('public/frontend/assets/imges/icon/clint-company.svg') }}" alt="" />
+                                    <img src="{{ asset('public/frontend/assets/image/icon/clint-company.svg') }}" alt="" />
                                 </div>
                                 <div class="about-page-data">
                                     <h6>Client / Company:</h6>
@@ -57,7 +57,7 @@
                         @if (isset($project->location) && $project->location)
                             <li class="border-0 d-flex align-items-center gap-3 py-4">
                                 <div class="about-page-img d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('public/frontend/assets/imges/icon/project-location.svg') }}"
+                                    <img src="{{ asset('public/frontend/assets/image/icon/project-location.svg') }}"
                                         alt="" />
                                 </div>
                                 <div class="about-page-data">
@@ -69,15 +69,16 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-8 p-0">
+            <div class="col-lg-8 col-12 news-detail-section">
                 <div class="news-detail-img">
                     {{-- <a href="#"> --}}
                         <figure class="image-anime">
                             @if (isset($project->image) && file_exists(public_path('Project/Image/' . $project->image)))
-                                <img src="{{ asset('public/Project/Image/' . $project->image) }}" alt="" />
+                                <img src="{{ asset('public/Project/Image/' . $project->image) }}" alt=""
+                                    class="img-fluid" />
                             @else
-                                <img src="{{ asset('public/frontend/assets/imges/bg-images/project-detail-img.jpg') }}"
-                                    alt="" />
+                                <img src="{{ asset('public/frontend/assets/image/project-detail-img.jpg') }}" alt=""
+                                    class="img-fluid" />
                             @endif
                         </figure>
                         {{--
@@ -128,7 +129,7 @@
                             </ul> --}}
                             @if (isset($getProjectGalleryImages) && count($getProjectGalleryImages) > 0)
                                                     <h2 class="comment-heading">Project Gallery</h2>
-                                                    <div class="container">
+                                                    <div class="container p-0">
                                                         <div id="gallery" class="photos-grid-container gallery">
                                                             <div>
                                                                 <div class="sub d-flex flex-wrap align-items-center gap-3">

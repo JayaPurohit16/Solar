@@ -7,14 +7,16 @@
     <title>Solar</title>
 
     <!-- Favicon -->
-    {{-- <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}"> --}}
-    <link rel="icon" type="image/x-icon" href="{{ asset('public/frontend/assets/image/sub-heading-img.svg') }}">
+    {{--
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}"> --}}
+    <link rel="icon" type="image/x-icon" href="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}">
 
     <!-- page css -->
     {{-- Data Table Link --}}
     <link href="{{ asset('public/assets/vendors/datatables/dataTables.bootstrap.min.css') }}" rel="stylesheet">
     {{-- Date Picker Link --}}
-    <link href="{{ asset('public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}"
+        rel="stylesheet">
     {{-- Select 2 Link --}}
     <link href="{{ asset('public/assets/vendors/select2/select2.css') }}" rel="stylesheet">
     <!-- Core css -->
@@ -31,7 +33,7 @@
 <body>
 
     <?php
-    $setting = App\Models\Cms::first();
+$setting = App\Models\Cms::first();
     ?>
 
     <div class="app">
@@ -40,24 +42,24 @@
             <div class="header">
                 <div class="logo logo-dark mt-1">
                     <a href="{{ route('admin.dashboard') }}">
-                        <img src="{{ asset('public/frontend/assets/image/solor-logo.svg') }}" width="120px;" height="60px"
-                            alt="Logo">
-                        <img class="logo-fold" src="{{ asset('public/frontend/assets/image/solor-logo.svg') }}" width="75px;"
+                        <img src="{{ asset('public/frontend/assets/image/icon/solor-logo.svg') }}" width="120px;"
                             height="60px" alt="Logo">
+                        <img class="logo-fold" src="{{ asset('public/frontend/assets/image/icon/solor-logo.svg') }}"
+                            width="75px;" height="60px" alt="Logo">
                         {{-- <h4 style="align-content: center;height: 65px;" class="custom">Solar</h4> --}}
                         {{-- @if (isset($setting))
-                            @if (isset($setting->logo) && file_exists(public_path('Cms/Logo/' . $setting->logo)))
-                                <div class="mt-1">
-                                    <img src="{{ asset('Cms/Logo/' . $setting->logo) }}" width="120px;" height="60px"
-                                        alt="Logo">
-                                    <img class="logo-fold" src="{{ asset('Cms/Logo/' . $setting->logo) }}"
-                                        width="75px;" height="60px" alt="Logo">
-                                </div>
-                            @else
-                                <h4 style="align-content: center;height: 65px;" class="custom">Solar</h4>
-                            @endif
+                        @if (isset($setting->logo) && file_exists(public_path('Cms/Logo/' . $setting->logo)))
+                        <div class="mt-1">
+                            <img src="{{ asset('Cms/Logo/' . $setting->logo) }}" width="120px;" height="60px"
+                                alt="Logo">
+                            <img class="logo-fold" src="{{ asset('Cms/Logo/' . $setting->logo) }}" width="75px;"
+                                height="60px" alt="Logo">
+                        </div>
                         @else
-                            <h4 style="align-content: center;height: 65px;" class="custom">Solar</h4>
+                        <h4 style="align-content: center;height: 65px;" class="custom">Solar</h4>
+                        @endif
+                        @else
+                        <h4 style="align-content: center;height: 65px;" class="custom">Solar</h4>
                         @endif --}}
                     </a>
                 </div>
@@ -107,8 +109,7 @@
                                         <i class="anticon font-size-10 anticon-right"></i>
                                     </div>
                                 </a> --}}
-                                <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                           document.getElementById('logout-form').submit();"
                                     class="dropdown-item d-block p-h-15 p-v-10">
                                     <div class="d-flex align-items-center justify-content-between">

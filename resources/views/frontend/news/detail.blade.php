@@ -11,8 +11,7 @@
                                 <img src="{{ asset('public/News/Image/' . $newsDetail->image) }}" alt=""
                                     class="img-fluid" />
                             @else
-                                <img src="{{ asset('public/frontend/assets/imges/bg-images/news-detail-img.jpg') }}"
-                                    alt="" />
+                                <img src="{{ asset('public/frontend/assets/image/news-detail-img.jpg') }}" alt="" />
                             @endif
                         </figure>
                         {{--

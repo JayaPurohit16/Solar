@@ -18,7 +18,8 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="section-sec-card footer-sec">
                                 <div class="card-img">
-                                    <img src="{{ asset('public/frontend/assets/image/svg/footer-svg.svg') }}   " alt="">
+                                    <img src="{{ asset('public/frontend/assets/image/icon/footer-svg.svg') }}   "
+                                        alt="">
                                 </div>
                                 <div class="card-text footer-card-text">
                                     <p>Support & Email</p>
@@ -30,7 +31,7 @@
                         <div class="col-lg-4 col-md-6 ">
                             <div class="section-sec-card footer-sec">
                                 <div class="card-img">
-                                    <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-1.svg') }}" alt="">
+                                    <img src="{{ asset('public/frontend/assets/image/icon/footer-svg-1.svg') }}" alt="">
                                 </div>
                                 <div class="card-text footer-card-text">
                                     <p>Customer Support</p>
@@ -44,7 +45,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="section-sec-card footer-sec">
                                 <div class="card-img">
-                                    <img src="{{ asset('public/frontend/assets/image/svg/footer-svg-2.svg') }}" alt="">
+                                    <img src="{{ asset('public/frontend/assets/image/icon/footer-svg-2.svg') }}" alt="">
                                 </div>
                                 <div class="card-text footer-card-text">
                                     <p>Our Location</p>
@@ -66,7 +67,7 @@
                             @if (isset($cms->footer_logo) && file_exists(public_path('Cms/FooterLogo/' . $cms->footer_logo)))
                                 <img src="{{ asset('public/Cms/FooterLogo/' . $cms->footer_logo) }}" alt="Footer Logo">
                             @else
-                                <img src="{{ asset('public/frontend/assets/image/footer-logo-img.svg') }}"
+                                <img src="{{ asset('public/frontend/assets/image/icon/footer-logo-img.svg') }}"
                                     alt="Footer Logo">
                             @endif
                             <p>Green Energy is a long established fact that a reader will be distracted by the
