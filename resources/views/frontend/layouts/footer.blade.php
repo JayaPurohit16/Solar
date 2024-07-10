@@ -167,32 +167,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
-<!-- Counter Number Js -->
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        function counter(id, start, end, duration) {
-            let obj = document.getElementById(id),
-                current = start,
-                range = end - start,
-                increment = end > start ? 1 : -1,
-                step = Math.abs(Math.floor(duration / range)),
-                timer = setInterval(() => {
-                    current += increment;
-                    obj.textContent = current;
-                    if (current == end) {
-                        clearInterval(timer);
-                    }
-                }, step);
-        }
-        counter("count1", 0, 1000, 3000);
-        counter("count2", 100, 1200, 2500);
-        counter("count3", 0, 850, 3000);
-        counter("count4", 0, 1100, 3000);
-    });
-</script>
-
-
 <script>
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
@@ -276,7 +250,7 @@
 <script>
     Splitting();
     ScrollOut({
-        targets: '[.fadeup-animation]'
+        targets: '.fadeup-animation'
     });
 </script>
 

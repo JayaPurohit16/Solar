@@ -52,9 +52,7 @@
                                 X 7 Call & Chat Support</span>
                         </div>
                     </div>
-                    <div class="about-btn fadeup-animation-text onview-port">
-                        <button>More About</button>
-                    </div>
+                    <button class="services-btn fadeup-animation-text onview-port">More About</button>
                 </div>
             </div>
         </div>
