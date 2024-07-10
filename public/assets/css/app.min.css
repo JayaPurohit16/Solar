@@ -10964,16 +10964,21 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 .select2-container {
-    display: block
+    padding: 0.55rem 1rem;
+    height: auto;
+    color: #53535f;
+    border: 1px solid #edf2f9;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    display: block;
 }
 
 .select2-container .select2-choice {
-    height: 2.5375rem;
-    border: 1px solid #edf2f9;
+    height: 1.2rem;
+    border: none;
     color: #53535f;
-    line-height: 2.5375rem;
     background-image: none;
-    background-color: #fff
+    background-color: #fff;
 }
 
 .select2-container .select2-choice .select2-arrow {
