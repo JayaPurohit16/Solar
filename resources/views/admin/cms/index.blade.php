@@ -26,7 +26,7 @@
                             <label>Customer Support</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <select class="form-control select2" name="country_code">
+                                    <select class="select2" name="country_code">
                                         @foreach ($countryCode as $code)
                                             <option value="{{ $code->id }}"
                                                 {{ (isset($cms->country_code) && $cms->country_code == $code->id) || (!isset($cms->country_code) && $code->phonecode == '91') ? 'selected' : '' }}>
