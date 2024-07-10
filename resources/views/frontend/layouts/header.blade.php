@@ -57,266 +57,261 @@
         $cms = App\Models\Cms::first();
     @endphp
 
-    @if (
-            Request::route()->getName() == 'frontend.index' ||
-            Request::route()->getName() == 'frontend.who-we-are.about-the-company'
-        )
-            <div class="hero-img">
-    @elseif(
-            Request::route()->getName() == 'frontend.who-we-are.leadership' ||
-            Request::route()->getName() == 'frontend.products.index' ||
-            Request::route()->getName() == 'frontend.project.index' ||
-            Request::route()->getName() == 'frontend.news.index' ||
-            Request::route()->getName() == 'frontend.news.detail'
-        )
-                <div class="hero-img leadership-bg">
+    @if (Request::route()->getName() == 'frontend.index' ||
+            Request::route()->getName() == 'frontend.who-we-are.about-the-company')
+        <div class="hero-img">
+        @elseif(Request::route()->getName() == 'frontend.who-we-are.leadership' ||
+                Request::route()->getName() == 'frontend.products.index' ||
+                Request::route()->getName() == 'frontend.project.index' ||
+                Request::route()->getName() == 'frontend.news.index' ||
+                Request::route()->getName() == 'frontend.news.detail')
+            <div class="hero-img leadership-bg">
     @endif
-            <div class="container p-sm-1 p-0">
-                <div class="top-bar">
-                    <div class="row">
-                        <div class="col-md-6 top-bar-list">
+    <div class="container p-sm-1 p-0">
+        <div class="top-bar">
+            <div class="row">
+                <div class="col-md-6 top-bar-list">
 
-                            <div class="top-email">
-                                <a href="#" class="d-flex align-items-center gap-2"> <i aria-hidden="true"
-                                        class="fas fa-envelope"></i>
-                                    {{ isset($cms->support_email) ? $cms->support_email : '' }}</a>
-                            </div>
-                            <div class="top-phone">
-                                <a href="#" class="d-flex align-items-center gap-2"><i aria-hidden="true"
-                                        class="fas fa-phone-alt"></i>
-                                    +{{ isset($cms->getCountryCode->phonecode) ? $cms->getCountryCode->phonecode : '' }}
-                                    {{ isset($cms->customer_support) ? $cms->customer_support : '' }}</a>
-                            </div>
+                    <div class="top-email">
+                        <a href="#" class="d-flex align-items-center gap-2"> <i aria-hidden="true"
+                                class="fas fa-envelope"></i>
+                            {{ isset($cms->support_email) ? $cms->support_email : '' }}</a>
+                    </div>
+                    <div class="top-phone">
+                        <a href="#" class="d-flex align-items-center gap-2"><i aria-hidden="true"
+                                class="fas fa-phone-alt"></i>
+                            +{{ isset($cms->getCountryCode->phonecode) ? $cms->getCountryCode->phonecode : '' }}
+                            {{ isset($cms->customer_support) ? $cms->customer_support : '' }}</a>
+                    </div>
 
+                </div>
+                <div class="col-md-6">
+                    <div class="top-bar-icon">
+                        <div class="bg-color-icon">
+                            <a href="{{ isset($cms->facebook_link) ? $cms->facebook_link : '' }}" target="_blank"><img
+                                    src="{{ asset('public/frontend/assets/image/icon/facebook-icon.svg') }}"
+                                    alt="Facebook Icon" width="16px" height="16px"></a>
                         </div>
-                        <div class="col-md-6">
-                            <div class="top-bar-icon">
-                                <div class="bg-color-icon">
-                                    <a href="{{ isset($cms->facebook_link) ? $cms->facebook_link : '' }}"
-                                        target="_blank"><img
-                                            src="{{ asset('public/frontend/assets/image/icon/facebook-icon.svg') }}"
-                                            alt="Facebook Icon" width="16px" height="16px"></a>
-                                </div>
-                                <div class="bg-color-icon">
-                                    <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}"
-                                        target="_blank"><img
-                                            src="{{ asset('public/frontend/assets/image/icon/twitter-icon.svg') }}"
-                                            alt="Facebook Icon" width="16px" height="16px"></a>
-                                </div>
-                                <div class="bg-color-icon">
-                                    <a href="{{ isset($cms->linkedin_link) ? $cms->linkedin_link : '' }}"
-                                        target="_blank"><img
-                                            src="{{ asset('public/frontend/assets/image/icon/linkedin-icon.svg') }}"
-                                            alt="Facebook Icon" width="16px" height="16px"></a>
-                                </div>
-                                <div class="bg-color-icon">
-                                    <a href="{{ isset($cms->instagram_link) ? $cms->instagram_link : '' }}"
-                                        target="_blank"><img
-                                            src="{{ asset('public/frontend/assets/image/icon/instagram-icon.svg') }}"
-                                            alt="Facebook Icon" width="16px" height="16px"></a>
-                                </div>
-                            </div>
+                        <div class="bg-color-icon">
+                            <a href="{{ isset($cms->twitter_link) ? $cms->twitter_link : '' }}" target="_blank"><img
+                                    src="{{ asset('public/frontend/assets/image/icon/twitter-icon.svg') }}"
+                                    alt="Facebook Icon" width="16px" height="16px"></a>
+                        </div>
+                        <div class="bg-color-icon">
+                            <a href="{{ isset($cms->linkedin_link) ? $cms->linkedin_link : '' }}" target="_blank"><img
+                                    src="{{ asset('public/frontend/assets/image/icon/linkedin-icon.svg') }}"
+                                    alt="Facebook Icon" width="16px" height="16px"></a>
+                        </div>
+                        <div class="bg-color-icon">
+                            <a href="{{ isset($cms->instagram_link) ? $cms->instagram_link : '' }}"
+                                target="_blank"><img
+                                    src="{{ asset('public/frontend/assets/image/icon/instagram-icon.svg') }}"
+                                    alt="Facebook Icon" width="16px" height="16px"></a>
                         </div>
                     </div>
-                    <div class="navbar-bg-white">
-                        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                            <div class="container-fluid">
-                                @if (isset($cms->logo) && file_exists(public_path('Cms/Logo/' . $cms->logo)))
-                                    <a class="navbar-brand" href="{{ route('frontend.index') }}"><img
-                                            src="{{ asset('public/Cms/Logo/' . $cms->logo) }}" alt="Logo"></a>
-                                @else
-                                    <a class="navbar-brand" href="{{ route('frontend.index') }}"><img
-                                            src="{{ asset('public/frontend/assets/image/icon/solor-logo.svg') }}"
-                                            alt="Logo"></a>
-                                @endif
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 align-items-center">
-                                        <li class="nav-item home-rel">
-                                            <a class="nav-link {{ Request::route()->getName() == 'frontend.index' ? 'active' : '' }}"
-                                                aria-current="page" href="{{ route('frontend.index') }}">Home</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-btn dropdown-toggle {{ Request::route()->getName() == 'frontend.who-we-are.about-the-company' || Request::route()->getName() == 'frontend.who-we-are.leadership' ? 'active' : '' }}"
-                                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Who We Are
-                                                <i class="ri-arrow-down-s-line"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-list">
-                                                <li><a class="dropdown-item"
-                                                        href="{{ route('frontend.who-we-are.about-the-company') }}">About
-                                                        the
-                                                        Company</a>
-                                                </li>
-                                                <li><a class="dropdown-item"
-                                                        href="{{ route('frontend.who-we-are.leadership') }}">Leadership</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-btn dropdown-toggle {{ Request::route()->getName() == 'frontend.products.index' ? 'active' : '' }}"
-                                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Products
-                                                <i class="ri-arrow-down-s-line"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-list">
-                                                <li>
-                                                    @foreach ($getProductTitle as $productTitle)
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('frontend.products.index', base64_encode($productTitle->id)) }}">{{ isset($productTitle->title) ? $productTitle->title : '' }}</a>
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-btn dropdown-toggle {{ Request::route()->getName() == 'frontend.project.index' ? 'active' : '' }}"
-                                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Project
-                                                <i class="ri-arrow-down-s-line"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-list">
-                                                <li>
-                                                    @foreach ($getProjectTitle as $title)
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('frontend.project.index', base64_encode($title->id)) }}">{{ isset($title->title) ? $title->title : '' }}
-                                                        </a>
-                                                    @endforeach
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link {{ Request::route()->getName() == 'frontend.news.index' || Request::route()->getName() == 'frontend.news.detail' ? 'active' : '' }}"
-                                                href="{{ route('frontend.news.index') }}">News</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button class="services-btn contact-btn">Contact Us</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                    @if (
-                            Request::route()->getName() == 'frontend.index' ||
-                            Request::route()->getName() == 'frontend.who-we-are.about-the-company'
-                        )
-                                            <div class="main-canten">
-                                                <div class="canten-text">
-                                                    <p class="canten-p fadeup-animation onview-port"><img
-                                                            src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
-                                                            alt="Heading Image">Welcome to solor</p>
-                                                    <h1 data-splitting class="onview-port">Lorem ipsum dolor sit amet <span
-                                                            class="con-bg">consectetu</span></h1>
-                                                    <p class="fadeup-animation-text onview-port">Lorem ipsum, dolor sit amet consectetur
-                                                        adipisicing elit. Assumenda excepturi corrupti
-                                                        harum
-                                                        eveniet quae fugit. Ad tempora tempore omnis numquam! Lorem ipsum dolor sit amet
-                                                        consectetur
-                                                        adipisicing elit.</p>
-
-                                                    <div class="canten-btn fadeup-animation-text onview-port">
-                                                        <button class="services-btn">Our Services</button>
-                                                        <button class="contactnow-btn">Contact Now</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                    @elseif (Request::route()->getName() == 'frontend.who-we-are.leadership')
-                        <div class="main-canten leadership-conten">
-                            <div class="canten-text">
-                                <h1 data-splitting class="onview-port">Leadership</h1>
-                                <div class="leadership-list fadeup-animation-text onview-port">
-                                    <ol>
-                                        <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                        <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
-                                                alt=""></li>
-                                        <li>Leadership</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    @elseif (Request::route()->getName() == 'frontend.products.index')
-                        <div class="main-canten leadership-conten">
-                            <div class="canten-text">
-                                <h1 data-splitting class="onview-port">Product</h1>
-                                <div class="leadership-list fadeup-animation-text onview-port">
-                                    <ol>
-                                        <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                        <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
-                                                alt=""></li>
-                                        <li>Product</li>
-                                        <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
-                                                alt=""></li>
-                                        <li>{{ isset($product->title) ? $product->title : '' }}</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    @elseif (Request::route()->getName() == 'frontend.project.index')
-                        <div class="main-canten leadership-conten">
-                            <div class="canten-text">
-                                <h1 data-splitting class="onview-port">Project</h1>
-                                <div class="leadership-list fadeup-animation-text onview-port">
-                                    <ol>
-                                        <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                        <li>
-                                            <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
-                                                alt="" />
-                                        </li>
-                                        <li>Project</li>
-                                        <li>
-                                            <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
-                                                alt="" />
-                                        </li>
-                                        <li>{{ isset($project->title) ? $project->title : '' }}</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    @elseif (Request::route()->getName() == 'frontend.news.index')
-                        <div class="main-canten leadership-conten">
-                            <div class="canten-text">
-                                <h1 data-splitting class="onview-port">News</h1>
-                                <div class="leadership-list fadeup-animation-text onview-port">
-                                    <ol>
-                                        <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                        <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
-                                                alt=""></li>
-                                        <li>News</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    @elseif (Request::route()->getName() == 'frontend.news.detail')
-                        <div class="main-canten leadership-conten">
-                            <div class="canten-text">
-                                <h1 data-splitting class="onview-port">
-                                    {{ isset($newsDetail->title) ? $newsDetail->title : '' }}
-                                </h1>
-                                <div class="leadership-list fadeup-animation-text onview-port">
-                                    <ol>
-                                        <li class="bg-li">
-                                            {{ isset($newsDetail->date) ? \Carbon\Carbon::parse($newsDetail->date)->format('F d.Y') : '' }}
-                                        </li>
-                                        <li>
-                                            <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
-                                                alt="" />
-                                        </li>
-                                        <li>By awaiken</li>
-                                        <li>
-                                            <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
-                                                alt="" />
-                                        </li>
-                                        <li>In Uncategorized</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
                 </div>
             </div>
+            <div class="navbar-bg-white">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        @if (isset($cms->logo) && file_exists(public_path('Cms/Logo/' . $cms->logo)))
+                            <a class="navbar-brand" href="{{ route('frontend.index') }}"><img
+                                    src="{{ asset('public/Cms/Logo/' . $cms->logo) }}" alt="Logo"></a>
+                        @else
+                            <a class="navbar-brand" href="{{ route('frontend.index') }}"><img
+                                    src="{{ asset('public/frontend/assets/image/icon/solor-logo.svg') }}"
+                                    alt="Logo"></a>
+                        @endif
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 align-items-center">
+                                <li class="nav-item home-rel">
+                                    <a class="nav-link {{ Request::route()->getName() == 'frontend.index' ? 'active' : '' }}"
+                                        aria-current="page" href="{{ route('frontend.index') }}">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-btn dropdown-toggle {{ Request::route()->getName() == 'frontend.who-we-are.about-the-company' || Request::route()->getName() == 'frontend.who-we-are.leadership' ? 'active' : '' }}"
+                                        href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Who We Are
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-list">
+                                        <li><a class="dropdown-item"
+                                                href="{{ route('frontend.who-we-are.about-the-company') }}">About
+                                                the
+                                                Company</a>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="{{ route('frontend.who-we-are.leadership') }}">Leadership</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-btn dropdown-toggle {{ Request::route()->getName() == 'frontend.products.index' ? 'active' : '' }}"
+                                        href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Products
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-list">
+                                        <li>
+                                            @foreach ($getProductTitle as $productTitle)
+                                                <a class="dropdown-item"
+                                                    href="{{ route('frontend.products.index', base64_encode($productTitle->id)) }}">{{ isset($productTitle->title) ? $productTitle->title : '' }}</a>
+                                            @endforeach
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-btn dropdown-toggle {{ Request::route()->getName() == 'frontend.project.index' ? 'active' : '' }}"
+                                        href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Project
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-list">
+                                        <li>
+                                            @foreach ($getProjectTitle as $title)
+                                                <a class="dropdown-item"
+                                                    href="{{ route('frontend.project.index', base64_encode($title->id)) }}">{{ isset($title->title) ? $title->title : '' }}
+                                                </a>
+                                            @endforeach
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link {{ Request::route()->getName() == 'frontend.news.index' || Request::route()->getName() == 'frontend.news.detail' ? 'active' : '' }}"
+                                        href="{{ route('frontend.news.index') }}">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="services-btn contact-btn">Contact Us</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            @if (Request::route()->getName() == 'frontend.index' ||
+                    Request::route()->getName() == 'frontend.who-we-are.about-the-company')
+                <div class="main-canten">
+                    <div class="canten-text">
+                        <p class="canten-p fadeup-animation onview-port"><img
+                                src="{{ asset('public/frontend/assets/image/icon/sub-heading-img.svg') }}"
+                                alt="Heading Image">Welcome to solor</p>
+                        <h1 data-splitting class="onview-port">Lorem ipsum dolor sit amet <span
+                                class="con-bg">consectetu</span></h1>
+                        <p class="fadeup-animation-text onview-port">Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Assumenda excepturi corrupti
+                            harum
+                            eveniet quae fugit. Ad tempora tempore omnis numquam! Lorem ipsum dolor sit amet
+                            consectetur
+                            adipisicing elit.</p>
+
+                        <div class="canten-btn fadeup-animation-text onview-port">
+                            <button class="services-btn">Our Services</button>
+                            <button class="contactnow-btn">Contact Now</button>
+                        </div>
+                    </div>
+                </div>
+            @elseif (Request::route()->getName() == 'frontend.who-we-are.leadership')
+                <div class="main-canten leadership-conten">
+                    <div class="canten-text">
+                        <h1 data-splitting class="onview-port">Leadership</h1>
+                        <div class="leadership-list fadeup-animation-text onview-port">
+                            <ol>
+                                <li><a href="{{ route('frontend.index') }}">Home</a></li>
+                                <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
+                                        alt=""></li>
+                                <li>Leadership</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            @elseif (Request::route()->getName() == 'frontend.products.index')
+                <div class="main-canten leadership-conten">
+                    <div class="canten-text">
+                        <h1 data-splitting class="onview-port">Product</h1>
+                        <div class="leadership-list fadeup-animation-text onview-port">
+                            <ol>
+                                <li><a href="{{ route('frontend.index') }}">Home</a></li>
+                                <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
+                                        alt=""></li>
+                                <li>Product</li>
+                                <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
+                                        alt=""></li>
+                                <li>{{ isset($product->title) ? $product->title : '' }}</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            @elseif (Request::route()->getName() == 'frontend.project.index')
+                <div class="main-canten leadership-conten">
+                    <div class="canten-text">
+                        <h1 data-splitting class="onview-port">Project</h1>
+                        <div class="leadership-list fadeup-animation-text onview-port">
+                            <ol>
+                                <li><a href="{{ route('frontend.index') }}">Home</a></li>
+                                <li>
+                                    <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
+                                        alt="" />
+                                </li>
+                                <li>Project</li>
+                                <li>
+                                    <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
+                                        alt="" />
+                                </li>
+                                <li>{{ isset($project->title) ? $project->title : '' }}</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            @elseif (Request::route()->getName() == 'frontend.news.index')
+                <div class="main-canten leadership-conten">
+                    <div class="canten-text">
+                        <h1 data-splitting class="onview-port">News</h1>
+                        <div class="leadership-list fadeup-animation-text onview-port">
+                            <ol>
+                                <li><a href="{{ route('frontend.index') }}">Home</a></li>
+                                <li><img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
+                                        alt=""></li>
+                                <li>News</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            @elseif (Request::route()->getName() == 'frontend.news.detail')
+                <div class="main-canten leadership-conten">
+                    <div class="canten-text">
+                        <h1 data-splitting class="onview-port">
+                            {{ isset($newsDetail->title) ? $newsDetail->title : '' }}
+                        </h1>
+                        <div class="leadership-list fadeup-animation-text onview-port">
+                            <ol>
+                                <li class="bg-li">
+                                    <a href="{{ route('frontend.index') }}">Home</a>
+                                    {{-- {{ isset($newsDetail->date) ? \Carbon\Carbon::parse($newsDetail->date)->format('F d.Y') : '' }} --}}
+                                </li>
+                                <li>
+                                    <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
+                                        alt="" />
+                                </li>
+                                <li>News</li>
+                                {{-- <li>
+                                    <img src="{{ asset('public/frontend/assets/image/icon/leadership-svg.svg') }}"
+                                        alt="" />
+                                </li>
+                                <li>In Uncategorized</li> --}}
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
+    </div>
+    </div>
