@@ -60,7 +60,14 @@
                         data: 'title',
                         render: function(data, type, row) {
                             if (data) {
-                                return data;
+                                var maxLength = 30;
+                                if (data.length > maxLength) {
+                                    return `<span data-toggle="tooltip" data-placement="top" title="${data}">
+                                                ${data.substr(0, maxLength)}...
+                                            </span>`;
+                                } else {
+                                    return `<span title="${data}">${data}</span>`;
+                                }
                             } else {
                                 return '-';
                             }
@@ -70,11 +77,21 @@
                         data: 'description',
                         render: function(data, type, row) {
                             if (data) {
-                                var maxLength = 50;
-                                if (data.length > maxLength) {
-                                    return data.substr(0, maxLength) + '...';
+                                var maxLength = 30;
+
+                                function stripHTML(html) {
+                                    var temporalDivElement = document.createElement('div');
+                                    temporalDivElement.innerHTML = html;
+                                    return temporalDivElement.textContent || temporalDivElement
+                                        .innerText || '';
+                                }
+                                var strippedData = stripHTML(data);
+                                if (strippedData.length > maxLength) {
+                                    return `<span data-toggle="tooltip" data-placement="top" title="${strippedData}">
+                                                ${strippedData.substr(0, maxLength)}...
+                                            </span>`;
                                 } else {
-                                    return data;
+                                    return `<span title="${strippedData}">${strippedData}</span>`;
                                 }
                             } else {
                                 return '-';
@@ -85,11 +102,21 @@
                         data: 'why_us_description',
                         render: function(data, type, row) {
                             if (data) {
-                                var maxLength = 50;
-                                if (data.length > maxLength) {
-                                    return data.substr(0, maxLength) + '...';
+                                var maxLength = 30;
+
+                                function stripHTML(html) {
+                                    var temporalDivElement = document.createElement('div');
+                                    temporalDivElement.innerHTML = html;
+                                    return temporalDivElement.textContent || temporalDivElement
+                                        .innerText || '';
+                                }
+                                var strippedData = stripHTML(data);
+                                if (strippedData.length > maxLength) {
+                                    return `<span data-toggle="tooltip" data-placement="top" title="${strippedData}">
+                                                ${strippedData.substr(0, maxLength)}...
+                                            </span>`;
                                 } else {
-                                    return data;
+                                    return `<span title="${strippedData}">${strippedData}</span>`;
                                 }
                             } else {
                                 return '-';
@@ -100,7 +127,14 @@
                         data: 'why_us_video_link',
                         render: function(data, type, row) {
                             if (data) {
-                                return data;
+                                var maxLength = 30;
+                                if (data.length > maxLength) {
+                                    return `<span data-toggle="tooltip" data-placement="top" title="${data}">
+                                                ${data.substr(0, maxLength)}...
+                                            </span>`;
+                                } else {
+                                    return `<span title="${data}">${data}</span>`;
+                                }
                             } else {
                                 return '-';
                             }

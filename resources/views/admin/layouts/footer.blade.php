@@ -37,18 +37,20 @@
     $(document).ready(function() {
         $('.datepicker-input').datepicker({
             format: 'yyyy-mm-dd',
-            todayHighlight: true
+            todayHighlight: true,
+            autoclose: true
         });
     });
 </script>
 {{-- Select 2 JS --}}
 <script src="{{ asset('public/assets/vendors/select2/select2.min.js') }}"></script>
 <script>
-    $('.select2').select2();
+    $('.select2').select2();    
 </script>
 {{-- Ck Edit JS --}}
 {{-- <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script> --}}
-<script src="//cdn.gaic.com/cdn/ui-bootstrap/0.58.0/js/lib/ckeditor/ckeditor.js"></script>
+{{-- <script src="//cdn.gaic.com/cdn/ui-bootstrap/0.58.0/js/lib/ckeditor/ckeditor.js"></script> --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.3.2/ckeditor.js"></script>
 {{-- Toastr Link --}}
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 {{-- Toastr JS --}}

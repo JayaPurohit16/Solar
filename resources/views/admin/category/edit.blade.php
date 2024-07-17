@@ -24,7 +24,8 @@
                             <label>Title</label>
                             <input type="text" class="form-control"
                                 value="{{ isset($editCategory->title) ? $editCategory->title : '' }}" name="title"
-                                placeholder="Title" maxlength="250">
+                                placeholder="Title" id="title" maxlength="50">
+                            <span id="title-msg" class="text-danger"></span>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Update</button>
@@ -41,13 +42,24 @@
                 ignore: [],
                 rules: {
                     title: {
-                        required: true
+                        required: true,
+                        maxlength: 50
                     }
                 },
                 messages: {
                     title: {
-                        required: "Please enter title"
+                        required: "Please enter title",
+                        maxlength: "Maximum 50 characters allowed"
                     }
+                }
+            });
+            $('#title').keyup(function() {
+                var max = 50;
+                var len = $(this).val().length;
+                if (len >= max) {
+                    $('#title-msg').text('Your characters limit is over');
+                } else {
+                    $('#title-msg').text('');
                 }
             });
         });

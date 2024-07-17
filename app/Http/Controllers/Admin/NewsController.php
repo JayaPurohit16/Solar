@@ -176,7 +176,7 @@ class NewsController extends Controller
 
     public function delete(Request $request, $id)
     {
-        try {
+        try {   
             $newsDelete = News::where('id', base64_decode($request->id))->first();
             if (File::exists(public_path('public/News/Image/' . $newsDelete->image))) {
                 unlink(public_path('public/News/Image/' . $newsDelete->image));
