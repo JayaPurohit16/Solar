@@ -24,7 +24,8 @@
                             <label>Title</label>
                             <input type="text" class="form-control"
                                 value="{{ isset($newsEdit->title) ? $newsEdit->title : '' }}" name="title"
-                                placeholder="Title" maxlength="250">
+                                placeholder="Title" maxlength="50" id="title">
+                            <span id="title-msg" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Date</label>
@@ -80,7 +81,8 @@
                 ignore: [],
                 rules: {
                     title: {
-                        required: true
+                        required: true,
+                        maxlength: 50
                     },
                     date: {
                         required: true
@@ -105,7 +107,9 @@
                 },
                 messages: {
                     title: {
-                        required: "Please enter title"
+                        required: "Please enter title",
+                        maxlength: "Maximum 50 characters allowed"
+
                     },
                     date: {
                         required: "Please select date"
@@ -123,6 +127,16 @@
                         },
                         checkFileExtension: "Only png, jpg, jpeg, or svg files are allowed"
                     },
+                }
+            });
+
+            $('#title').keyup(function() {
+                var max = 50;
+                var len = $(this).val().length;
+                if (len >= max) {
+                    $('#title-msg').text('Your characters limit is over');
+                } else {
+                    $('#title-msg').text('');
                 }
             });
 

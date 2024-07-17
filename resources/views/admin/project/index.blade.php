@@ -74,7 +74,14 @@
                         data: 'title',
                         render: function(data, type, row) {
                             if (data) {
-                                return data;
+                                var maxLength = 20;
+                                if (data.length > maxLength) {
+                                    return `<span data-toggle="tooltip" data-placement="top" title="${data}">
+                                                ${data.substr(0, maxLength)}...
+                                            </span>`;
+                                } else {
+                                    return `<span title="${data}">${data}</span>`;
+                                }
                             } else {
                                 return '-';
                             }
@@ -94,7 +101,14 @@
                         data: 'energy_generation',
                         render: function(data, type, row) {
                             if (data) {
-                                return data;
+                                var maxLength = 20;
+                                if (data.length > maxLength) {
+                                    return `<span data-toggle="tooltip" data-placement="top" title="${data}">
+                                                ${data.substr(0, maxLength)}...
+                                            </span>`;
+                                } else {
+                                    return `<span title="${data}">${data}</span>`;
+                                }
                             } else {
                                 return '-';
                             }
@@ -114,7 +128,14 @@
                         data: 'client_company',
                         render: function(data, type, row) {
                             if (data) {
-                                return data;
+                                var maxLength = 20;
+                                if (data.length > maxLength) {
+                                    return `<span data-toggle="tooltip" data-placement="top" title="${data}">
+                                                ${data.substr(0, maxLength)}...
+                                            </span>`;
+                                } else {
+                                    return `<span title="${data}">${data}</span>`;
+                                }
                             } else {
                                 return '-';
                             }
@@ -124,7 +145,14 @@
                         data: 'location',
                         render: function(data, type, row) {
                             if (data) {
-                                return data;
+                                var maxLength = 20;
+                                if (data.length > maxLength) {
+                                    return `<span data-toggle="tooltip" data-placement="top" title="${data}">
+                                                ${data.substr(0, maxLength)}...
+                                            </span>`;
+                                } else {
+                                    return `<span title="${data}">${data}</span>`;
+                                }
                             } else {
                                 return '-';
                             }

@@ -51,13 +51,14 @@
                             <label>Title</label>
                             <input type="text" class="form-control"
                                 value="{{ isset($projectEdit->title) ? $projectEdit->title : '' }}" name="title"
-                                placeholder="Title" maxlength="250">
+                                placeholder="Title" maxlength="50" id="title">
+                            <span id="title-msg" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Project Date</label>
                             <input type="text"
                                 value="{{ isset($projectEdit->project_date) ? $projectEdit->project_date : '' }}"
-                                class="form-control datepicker-input" name="project_date" placeholder="Project Date">
+                                class="form-control datepicker-input" onkeypress="return /[]/i.test(event.key)" name="project_date" placeholder="Project Date">
                         </div>
                     </div>
                     <div class="form-row">
@@ -211,7 +212,8 @@
                 ignore: [],
                 rules: {
                     title: {
-                        required: true
+                        required: true,
+                        maxlength: 50
                     },
                     description: {
                         required: function(mydata) {
@@ -246,7 +248,8 @@
                 },
                 messages: {
                     title: {
-                        required: "Please enter title"
+                        required: "Please enter title",
+                        maxlength: "Maximum 50 characters allowed"
                     },
                     description: {
                         required: "Please enter description"
@@ -268,6 +271,16 @@
                         required: "Please upload gallery images",
                         checkFileExtension: "Only png, jpg, jpeg, or svg files are allowed"
                     }
+                }
+            });
+
+            $('#title').keyup(function() {
+                var max = 50;
+                var len = $(this).val().length;
+                if (len >= max) {
+                    $('#title-msg').text('Your characters limit is over');
+                } else {
+                    $('#title-msg').text('');
                 }
             });
 

@@ -44,6 +44,20 @@
                  </a>
              </li>
 
+             <!-- Product -->
+             <li
+                 class="{{ Request::route()->getName() == 'admin.services.index' || Request::route()->getName() == 'admin.services.create' || Request::route()->getName() == 'admin.services.edit' ? 'active' : '' }}">
+                 <a href="{{ route('admin.services.index') }}">
+                     <span class="icon-holder">
+                         <i class="anticon anticon-appstore"></i>
+                     </span>
+                     <span class="title" title="Product">Product</span>
+                     <span class="arrow">
+                         <i class="arrow-icon"></i>
+                     </span>
+                 </a>
+             </li>
+
              <!-- News -->
              <li
                  class="{{ Request::route()->getName() == 'admin.news.index' || Request::route()->getName() == 'admin.news.create' || Request::route()->getName() == 'admin.news.edit' ? 'active' : '' }}">
@@ -52,20 +66,6 @@
                          <i class="far fa-newspaper"></i>
                      </span>
                      <span class="title" title="News">News</span>
-                     <span class="arrow">
-                         <i class="arrow-icon"></i>
-                     </span>
-                 </a>
-             </li>
-
-             <!-- Product -->
-             <li
-                 class="{{ Request::route()->getName() == 'admin.services.index' || Request::route()->getName() == 'admin.services.create' || Request::route()->getName() == 'admin.services.edit' ? 'active' : '' }}">
-                 <a href="{{ route('admin.services.index') }}">
-                     <span class="icon-holder">
-                        <i class="anticon anticon-appstore"></i>
-                     </span>
-                     <span class="title" title="Product">Product</span>
                      <span class="arrow">
                          <i class="arrow-icon"></i>
                      </span>

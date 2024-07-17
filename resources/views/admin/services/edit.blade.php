@@ -7,7 +7,8 @@
                 <nav class="breadcrumb breadcrumb-dash">
                     <a href="{{ route('admin.dashboard') }}" class="breadcrumb-item"><i
                             class="anticon anticon-home m-r-5"></i>Home</a>
-                    <a href="{{ route('admin.services.index') }}" class="breadcrumb-item"><i class="anticon anticon-appstore"></i></i>
+                    <a href="{{ route('admin.services.index') }}" class="breadcrumb-item"><i
+                            class="anticon anticon-appstore"></i></i>
                         Product</a>
                 </nav>
             </div>
@@ -24,7 +25,8 @@
                             <label>Title</label>
                             <input type="text" class="form-control"
                                 value="{{ isset($servicesEdit->title) ? $servicesEdit->title : '' }}" name="title"
-                                placeholder="Title" maxlength="250">
+                                placeholder="Title" maxlength="50" id="title">
+                            <span id="title-msg" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Image</label>
@@ -91,7 +93,8 @@
                 ignore: [],
                 rules: {
                     title: {
-                        required: true
+                        required: true,
+                        maxlength: 50
                     },
                     image: {
                         required: function(element) {
@@ -116,7 +119,8 @@
                 },
                 messages: {
                     title: {
-                        required: "Please enter title"
+                        required: "Please enter title",
+                        maxlength: "Maximum 50 characters allowed"
                     },
                     image: {
                         required: function(element) {
@@ -138,6 +142,16 @@
                         required: "Please enter video link",
                         url: "Please enter a valid url"
                     },
+                }
+            });
+
+            $('#title').keyup(function() {
+                var max = 50;
+                var len = $(this).val().length;
+                if (len >= max) {
+                    $('#title-msg').text('Your characters limit is over');
+                } else {
+                    $('#title-msg').text('');
                 }
             });
 

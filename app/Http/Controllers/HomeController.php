@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\News;
 use App\Models\Project;
 use App\Models\Services;
 use Exception;
@@ -36,7 +37,8 @@ class HomeController extends Controller
             $category = Category::count();
             $project = Project::count();
             $services = Services::count();
-            return view('admin.dashboard', compact('category', 'project', 'services'));
+            $news = News::count();
+            return view('admin.dashboard', compact('category', 'project', 'services', 'news'));
         } catch (Exception $e) {
             Log::error('Admin Dashboard Error : ' . $e->getMessage());
             return redirect()->back()->with('error', 'Something went wrong!');
