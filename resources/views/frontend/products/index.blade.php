@@ -9,7 +9,8 @@
             align-items: center;
             justify-content: center;
         }
-        .invaild-p{
+
+        .invaild-p {
             text-align: center;
             display: flex;
             align-items: center;
@@ -296,8 +297,9 @@
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <div class="modal-body invaild-link-model">
+                <div class="modal-body">
                     @if (isset($product->why_us_video_link) && $product->why_us_video_link != null)
                         @php
                             preg_match(
@@ -314,7 +316,9 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         @else
-                            <p class="invaild-p">Invalid YouTube link.</p>
+                            <div class="invaild-link-model">
+                                <p class="invaild-p">Invalid YouTube link.</p>
+                            </div>
                         @endif
                     @else
                         <p>No link found</p>
